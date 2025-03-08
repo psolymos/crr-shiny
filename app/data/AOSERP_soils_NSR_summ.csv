@@ -1,0 +1,29 @@
+"","NSRNAME","Txtrcls","nPOLY","Soil_Area","texture_Areaha","texture_Areaha_perc","Txtrcls_num"
+"1","Athabasca Plain","clay",1,0,0,0,1
+"2","Central Mixedwood","clay",136,1586421649.42191,158642,16.5,1
+"3","Lower Boreal Highlands","clay",2,3140616.51456905,314,0.4,1
+"4","Upper Boreal Highlands","clay",1,0,0,0,1
+"5","Athabasca Plain","clay loam",1,0,0,0,2
+"6","Central Mixedwood","clay loam",101,1035975066.84007,103598,10.7,2
+"7","Lower Boreal Highlands","clay loam",66,461832833.044397,46183,59.4,2
+"8","Upper Boreal Highlands","clay loam",92,553308199.593784,55331,46.1,2
+"9","Athabasca Plain","sandy clay",58,189427057.190585,18943,8.1,3
+"10","Central Mixedwood","sandy clay",41,259658138.207271,25966,2.7,3
+"11","Lower Boreal Highlands","sandy clay",5,12374863.4934838,1237,1.6,3
+"12","Upper Boreal Highlands","sandy clay",6,6424248.2126572,642,0.5,3
+"13","Athabasca Plain","loam",1,0,0,0,4
+"14","Central Mixedwood","loam",75,483183414.919232,48318,5,4
+"15","Lower Boreal Highlands","loam",6,9776470.92897344,978,1.3,4
+"16","Upper Boreal Highlands","loam",1,0,0,0,4
+"17","Athabasca Plain","sand",208,1774275417.17391,177428,75.4,5
+"18","Central Mixedwood","sand",204,1065725719.44527,106573,11.1,5
+"19","Lower Boreal Highlands","sand",11,23552685.0412212,2355,3,5
+"20","Upper Boreal Highlands","sand",58,132165750.318802,13217,11,5
+"21","Athabasca Plain","organic",92,231859686.588419,23186,9.9,6
+"22","Central Mixedwood","organic",513,4642623567.20412,464262,48.2,6
+"23","Lower Boreal Highlands","organic",79,242417662.953021,24242,31.2,6
+"24","Upper Boreal Highlands","organic",149,481847634.070093,48185,40.2,6
+"25","Athabasca Plain","No data",37,156764241.851435,15676,6.7,7
+"26","Central Mixedwood","No data",58,564058456.056674,56406,5.9,7
+"27","Lower Boreal Highlands","No data",17,24728886.4795216,2473,3.2,7
+"28","Upper Boreal Highlands","No data",24,25909568.0846563,2591,2.2,7

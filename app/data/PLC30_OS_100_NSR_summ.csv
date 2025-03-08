@@ -1,0 +1,127 @@
+"","NSRNAME","Landcover_class","nPOLY","PLC_Area","Landcover_class_name","PLC_Area_perc"
+"1","Alpine",0,2646,2510.86872746747,"Open water",0.2
+"2","Alpine",1,NA,0,"Fen",0
+"3","Alpine",2,46,43.4205730827525,"Bog",0
+"4","Alpine",3,NA,0,"Marsh",0
+"5","Alpine",4,NA,0,"Swamp",0
+"6","Alpine",5,1596733,1501539.28503059,"Upland",99.8
+"7","Alpine",6,7,6.89836120605469,"Wetland general",0
+"8","Athabasca Plain",0,258956,258083.14549735,"Open water",19.1
+"9","Athabasca Plain",1,198806,197430.276938219,"Fen",14.6
+"10","Athabasca Plain",2,8506,8465.42315010959,"Bog",0.6
+"11","Athabasca Plain",3,7244,7116.74910087038,"Marsh",0.5
+"12","Athabasca Plain",4,14765,14551.4148370789,"Swamp",1.1
+"13","Athabasca Plain",5,871242,866878.421169521,"Upland",64.1
+"14","Athabasca Plain",6,NA,0,"Wetland general",0
+"15","Boreal Subarctic",0,55435,55379.0269301091,"Open water",4.7
+"16","Boreal Subarctic",1,499682,498115.784789714,"Fen",42.1
+"17","Boreal Subarctic",2,91220,91130.0636583445,"Bog",7.7
+"18","Boreal Subarctic",3,2782,2767.23423787951,"Marsh",0.2
+"19","Boreal Subarctic",4,9191,9165.12867400039,"Swamp",0.8
+"20","Boreal Subarctic",5,530886,525714.461553171,"Upland",44.5
+"21","Boreal Subarctic",6,NA,0,"Wetland general",0
+"22","Central Mixedwood",0,702362,700505.848739126,"Open water",4.2
+"23","Central Mixedwood",1,3947920,3942430.8333462,"Fen",23.5
+"24","Central Mixedwood",2,501058,500614.090411084,"Bog",3
+"25","Central Mixedwood",3,191986,191344.196006451,"Marsh",1.1
+"26","Central Mixedwood",4,969106,967198.132828926,"Swamp",5.8
+"27","Central Mixedwood",5,10549658,10483366.2132136,"Upland",62.5
+"28","Central Mixedwood",6,NA,0,"Wetland general",0
+"29","Central Parkland",0,290,151.361128078735,"Open water",2.5
+"30","Central Parkland",1,42,23.9345582427986,"Fen",0.4
+"31","Central Parkland",2,5,3.35057732230052,"Bog",0.1
+"32","Central Parkland",3,44,21.6439269702387,"Marsh",0.4
+"33","Central Parkland",4,NA,0,"Swamp",0
+"34","Central Parkland",5,11457,5835.54558615402,"Upland",96.7
+"35","Central Parkland",6,NA,0,"Wetland general",0
+"36","Dry Mixedwood",0,253639,252109.28897135,"Open water",3
+"37","Dry Mixedwood",1,296835,295690.545739929,"Fen",3.5
+"38","Dry Mixedwood",2,19452,19381.5087154868,"Bog",0.2
+"39","Dry Mixedwood",3,65730,65392.1764322511,"Marsh",0.8
+"40","Dry Mixedwood",4,141902,141186.676771915,"Swamp",1.7
+"41","Dry Mixedwood",5,7659975,7616964.65691907,"Upland",90.8
+"42","Dry Mixedwood",6,NA,0,"Wetland general",0
+"43","Foothills Fescue",0,1,0.454140841960907,"Open water",0
+"44","Foothills Fescue",1,NA,0,"Fen",0
+"45","Foothills Fescue",2,NA,0,"Bog",0
+"46","Foothills Fescue",3,NA,0,"Marsh",0
+"47","Foothills Fescue",4,NA,0,"Swamp",0
+"48","Foothills Fescue",5,5961,3615.93713484215,"Upland",99.7
+"49","Foothills Fescue",6,33,8.96653399552451,"Wetland general",0.2
+"50","Foothills Parkland",0,42,11.6167364806461,"Open water",0.2
+"51","Foothills Parkland",1,NA,0,"Fen",0
+"52","Foothills Parkland",2,NA,0,"Bog",0
+"53","Foothills Parkland",3,NA,0,"Marsh",0
+"54","Foothills Parkland",4,5,2.32538038492203,"Swamp",0
+"55","Foothills Parkland",5,11856,7123.25774355382,"Upland",99.6
+"56","Foothills Parkland",6,37,17.2247792365961,"Wetland general",0.2
+"57","Kazan Uplands",0,111397,110733.283833271,"Open water",11.4
+"58","Kazan Uplands",1,91338,90974.9738514505,"Fen",9.4
+"59","Kazan Uplands",2,1575,1548.03085254319,"Bog",0.2
+"60","Kazan Uplands",3,18305,18251.4834567512,"Marsh",1.9
+"61","Kazan Uplands",4,12763,12707.9240364282,"Swamp",1.3
+"62","Kazan Uplands",5,739875,737666.127087184,"Upland",75.9
+"63","Kazan Uplands",6,NA,0,"Wetland general",0
+"64","Lower Boreal Highlands",0,91969,91698.1690195078,"Open water",1.6
+"65","Lower Boreal Highlands",1,1094650,1087853.9574898,"Fen",19.6
+"66","Lower Boreal Highlands",2,149040,148353.313681668,"Bog",2.7
+"67","Lower Boreal Highlands",3,35695,35453.4944264338,"Marsh",0.6
+"68","Lower Boreal Highlands",4,258690,257224.336229717,"Swamp",4.6
+"69","Lower Boreal Highlands",5,3988847,3940716.01159749,"Upland",70.9
+"70","Lower Boreal Highlands",6,NA,0,"Wetland general",0
+"71","Lower Foothills",0,35946,35769.4529191647,"Open water",0.8
+"72","Lower Foothills",1,324956,323700.675601298,"Fen",7.2
+"73","Lower Foothills",2,3728,3699.73567454536,"Bog",0.1
+"74","Lower Foothills",3,5230,5188.15668293874,"Marsh",0.1
+"75","Lower Foothills",4,43950,43391.2203740141,"Swamp",1
+"76","Lower Foothills",5,4134920,4078091.21110358,"Upland",90.8
+"77","Lower Foothills",6,13,3.34267327998532,"Wetland general",0
+"78","Montane",0,17691,17627.6102632108,"Open water",2.1
+"79","Montane",1,15,2.68790197372437,"Fen",0
+"80","Montane",2,209,209,"Bog",0
+"81","Montane",3,6,5.60735619068146,"Marsh",0
+"82","Montane",4,20,3.79438971378841,"Swamp",0
+"83","Montane",5,846693,819963.968737567,"Upland",97
+"84","Montane",6,7720,7684.92929128852,"Wetland general",0.9
+"85","Northern Mixedwood",0,141752,141372.622301576,"Open water",4.8
+"86","Northern Mixedwood",1,975281,972831.441826521,"Fen",33
+"87","Northern Mixedwood",2,448205,447621.154095764,"Bog",15.2
+"88","Northern Mixedwood",3,27261,27173.3318978833,"Marsh",0.9
+"89","Northern Mixedwood",4,97921,97593.1777776356,"Swamp",3.3
+"90","Northern Mixedwood",5,1271016,1264684.24486918,"Upland",42.9
+"91","Northern Mixedwood",6,NA,0,"Wetland general",0
+"92","Peace-Athabasca Delta",0,198224,197616.922403118,"Open water",35.7
+"93","Peace-Athabasca Delta",1,37208,36954.0738343249,"Fen",6.7
+"94","Peace-Athabasca Delta",2,874,864.840736143291,"Bog",0.2
+"95","Peace-Athabasca Delta",3,56187,55918.6379790236,"Marsh",10.1
+"96","Peace-Athabasca Delta",4,64670,64385.2593763054,"Swamp",11.6
+"97","Peace-Athabasca Delta",5,200240,197802.660570954,"Upland",35.7
+"98","Peace-Athabasca Delta",6,NA,0,"Wetland general",0
+"99","Peace River Parkland",0,8213,7844.01446882394,"Open water",2.5
+"100","Peace River Parkland",1,1054,1050.31865634909,"Fen",0.3
+"101","Peace River Parkland",2,57,56.3645423352718,"Bog",0
+"102","Peace River Parkland",3,911,902.075049195439,"Marsh",0.3
+"103","Peace River Parkland",4,401,398.766757214442,"Swamp",0.1
+"104","Peace River Parkland",5,305273,301790.737747865,"Upland",96.7
+"105","Peace River Parkland",6,NA,0,"Wetland general",0
+"106","Subalpine",0,13477,13289.5276257921,"Open water",0.5
+"107","Subalpine",1,128,18.7575512360831,"Fen",0
+"108","Subalpine",2,125,123.254747241735,"Bog",0
+"109","Subalpine",3,6,3.92462722212076,"Marsh",0
+"110","Subalpine",4,129,27.8111470592871,"Swamp",0
+"111","Subalpine",5,2639638,2499943.91913297,"Upland",99.2
+"112","Subalpine",6,7223,7192.01540445071,"Wetland general",0.3
+"113","Upper Boreal Highlands",0,25699,25587.2509113778,"Open water",2.2
+"114","Upper Boreal Highlands",1,307804,305528.349710932,"Fen",25.8
+"115","Upper Boreal Highlands",2,29122,28940.2671607435,"Bog",2.4
+"116","Upper Boreal Highlands",3,3604,3570.47682719561,"Marsh",0.3
+"117","Upper Boreal Highlands",4,17284,17107.4258657644,"Swamp",1.4
+"118","Upper Boreal Highlands",5,820153,805076.009726759,"Upland",67.9
+"119","Upper Boreal Highlands",6,NA,0,"Wetland general",0
+"120","Upper Foothills",0,7547,7419.57703620226,"Open water",0.3
+"121","Upper Foothills",1,80828,80363.3411681836,"Fen",3.7
+"122","Upper Foothills",2,400,394.701210373198,"Bog",0
+"123","Upper Foothills",3,679,672.791405242868,"Marsh",0
+"124","Upper Foothills",4,31014,30704.9075552639,"Swamp",1.4
+"125","Upper Foothills",5,2092934,2034119.4182118,"Upland",94.4
+"126","Upper Foothills",6,130,25.6229562425287,"Wetland general",0

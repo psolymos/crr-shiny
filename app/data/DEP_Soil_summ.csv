@@ -1,0 +1,117 @@
+"","NSRNAME","DEP_ecosite","nPOLY","DEP_Area","StralbergName","Color","DEPordNum","DEPord","DEP_Area_perc"
+"1","Athabasca Plain",1,636,630.353830830674,"Poor-Xeric Grassland","#FFF0C6",1,"1_Poor-Xeric Grassland",0.5
+"2","Central Mixedwood",1,275,266.920885063708,"Poor-Xeric Grassland","#FFF0C6",1,"1_Poor-Xeric Grassland",0
+"3","Lower Boreal Highlands",1,1,0,"Poor-Xeric Grassland","#FFF0C6",1,"1_Poor-Xeric Grassland",0
+"4","Upper Boreal Highlands",1,1,0,"Poor-Xeric Grassland","#FFF0C6",1,"1_Poor-Xeric Grassland",0
+"5","Athabasca Plain",2,67409,67234.0858257163,"Poor-Xeric Jack Pine","#FF9E56",2,"2_Poor-Xeric Jack Pine",58.6
+"6","Central Mixedwood",2,3157,2925.60451130918,"Poor-Xeric Jack Pine","#FF9E56",2,"2_Poor-Xeric Jack Pine",0.3
+"7","Lower Boreal Highlands",2,6,5.07969414442778,"Poor-Xeric Jack Pine","#FF9E56",2,"2_Poor-Xeric Jack Pine",0
+"8","Upper Boreal Highlands",2,11,11,"Poor-Xeric Jack Pine","#FF9E56",2,"2_Poor-Xeric Jack Pine",0
+"9","Athabasca Plain",4,2281,2194.68180958126,"Poor-Mesic Pine","#FFA627",4,"4_Poor-Mesic Pine",1.9
+"10","Central Mixedwood",4,43245,43065.9818547203,"Poor-Mesic Pine","#FFA627",4,"4_Poor-Mesic Pine",4.7
+"11","Lower Boreal Highlands",4,13270,12956.6620170732,"Poor-Mesic Pine","#FFA627",4,"4_Poor-Mesic Pine",17.7
+"12","Upper Boreal Highlands",4,30339,30050.8298897897,"Poor-Mesic Pine","#FFA627",4,"4_Poor-Mesic Pine",29.9
+"13","Athabasca Plain",5,1,0,"Poor-Mesic Black Spruce","#DBE628",5,"5_Poor-Mesic Black Spruce",0
+"14","Central Mixedwood",5,10,6.04439152218401,"Poor-Mesic Black Spruce","#DBE628",5,"5_Poor-Mesic Black Spruce",0
+"15","Lower Boreal Highlands",5,1922,1880.5720405976,"Poor-Mesic Black Spruce","#DBE628",5,"5_Poor-Mesic Black Spruce",2.6
+"16","Upper Boreal Highlands",5,2277,2246.38339563832,"Poor-Mesic Black Spruce","#DBE628",5,"5_Poor-Mesic Black Spruce",2.2
+"17","Athabasca Plain",6,678,650.768589389831,"Poor-Hygric Black Spruce","#A6AE1F",6,"6_Poor-Hygric Black Spruce",0.6
+"18","Central Mixedwood",6,7905,7867.14062256156,"Poor-Hygric Black Spruce","#A6AE1F",6,"6_Poor-Hygric Black Spruce",0.9
+"19","Lower Boreal Highlands",6,2192,2139.08884591336,"Poor-Hygric Black Spruce","#A6AE1F",6,"6_Poor-Hygric Black Spruce",2.9
+"20","Upper Boreal Highlands",6,6159,6100.02713974354,"Poor-Hygric Black Spruce","#A6AE1F",6,"6_Poor-Hygric Black Spruce",6.1
+"21","Athabasca Plain",7,6928,6834.00112604528,"Poor-Hydric Black Spruce / Larch","#666B14",7,"7_Poor-Hydric Black Spruce / Larch",6
+"22","Central Mixedwood",7,243801,243474.946324092,"Poor-Hydric Black Spruce / Larch","#666B14",7,"7_Poor-Hydric Black Spruce / Larch",26.6
+"23","Lower Boreal Highlands",7,12344,12166.9356966522,"Poor-Hydric Black Spruce / Larch","#666B14",7,"7_Poor-Hydric Black Spruce / Larch",16.7
+"24","Upper Boreal Highlands",7,25544,25440.4711168045,"Poor-Hydric Black Spruce / Larch","#666B14",7,"7_Poor-Hydric Black Spruce / Larch",25.3
+"25","Athabasca Plain",8,3963,3861.1073829028,"Poor-Hydric Shrub ","#593E1F",8,"8_Poor-Hydric Shrub ",3.4
+"26","Central Mixedwood",8,44287,44158.0581222983,"Poor-Hydric Shrub ","#593E1F",8,"8_Poor-Hydric Shrub ",4.8
+"27","Lower Boreal Highlands",8,1886,1861.28795357514,"Poor-Hydric Shrub ","#593E1F",8,"8_Poor-Hydric Shrub ",2.5
+"28","Upper Boreal Highlands",8,4108,4089.98444192408,"Poor-Hydric Shrub ","#593E1F",8,"8_Poor-Hydric Shrub ",4.1
+"29","Athabasca Plain",9,1,0.238901749253273,"Medium-Xeric Grassland","#FFFD77",9,"9_Medium-Xeric Grassland",0
+"30","Central Mixedwood",9,105,104.752076387405,"Medium-Xeric Grassland","#FFFD77",9,"9_Medium-Xeric Grassland",0
+"31","Lower Boreal Highlands",9,54,52.0834766449407,"Medium-Xeric Grassland","#FFFD77",9,"9_Medium-Xeric Grassland",0.1
+"32","Upper Boreal Highlands",9,14,12.9255452007055,"Medium-Xeric Grassland","#FFFD77",9,"9_Medium-Xeric Grassland",0
+"33","Athabasca Plain",10,180,165.146722749807,"Medium-Xeric Aspen Mix","#FFFB00",10,"10_Medium-Xeric Aspen Mix",0.1
+"34","Central Mixedwood",10,30043,29960.3829483764,"Medium-Xeric Aspen Mix","#FFFB00",10,"10_Medium-Xeric Aspen Mix",3.3
+"35","Lower Boreal Highlands",10,382,312.888104060163,"Medium-Xeric Aspen Mix","#FFFB00",10,"10_Medium-Xeric Aspen Mix",0.4
+"36","Upper Boreal Highlands",10,46,44.7012414174969,"Medium-Xeric Aspen Mix","#FFFB00",10,"10_Medium-Xeric Aspen Mix",0
+"37","Athabasca Plain",11,14,13.9862835407257,"Medium-Xeric Pine","#7D0C0C",11,"11_Medium-Xeric Pine",0
+"38","Central Mixedwood",11,445,443.547545637935,"Medium-Xeric Pine","#7D0C0C",11,"11_Medium-Xeric Pine",0
+"39","Lower Boreal Highlands",11,48,47.5738766789436,"Medium-Xeric Pine","#7D0C0C",11,"11_Medium-Xeric Pine",0.1
+"40","Upper Boreal Highlands",11,27,26.426123291254,"Medium-Xeric Pine","#7D0C0C",11,"11_Medium-Xeric Pine",0
+"41","Athabasca Plain",12,310,294.709236450493,"Medium-Xeric Spruce","#698222",12,"12_Medium-Xeric Spruce",0.3
+"42","Central Mixedwood",12,3401,3378.75066215312,"Medium-Xeric Spruce","#698222",12,"12_Medium-Xeric Spruce",0.4
+"43","Lower Boreal Highlands",12,19,15.7632855742704,"Medium-Xeric Spruce","#698222",12,"12_Medium-Xeric Spruce",0
+"44","Upper Boreal Highlands",12,1,0,"Medium-Xeric Spruce","#698222",12,"12_Medium-Xeric Spruce",0
+"45","Athabasca Plain",13,13,10.0215437971056,"Medium-Mesic Grassland","#D5FF95",13,"13_Medium-Mesic Grassland",0
+"46","Central Mixedwood",13,9343,9330.88953953981,"Medium-Mesic Grassland","#D5FF95",13,"13_Medium-Mesic Grassland",1
+"47","Lower Boreal Highlands",13,205,196.124175924342,"Medium-Mesic Grassland","#D5FF95",13,"13_Medium-Mesic Grassland",0.3
+"48","Upper Boreal Highlands",13,293,285.254484920297,"Medium-Mesic Grassland","#D5FF95",13,"13_Medium-Mesic Grassland",0.3
+"49","Athabasca Plain",15,7,3.21845567342825,"Medium-Mesic Aspen Mix","#B1FF38",15,"15_Medium-Mesic Aspen Mix",0
+"50","Central Mixedwood",15,23571,23462.5187289642,"Medium-Mesic Aspen Mix","#B1FF38",15,"15_Medium-Mesic Aspen Mix",2.6
+"51","Lower Boreal Highlands",15,5032,4850.05608968983,"Medium-Mesic Aspen Mix","#B1FF38",15,"15_Medium-Mesic Aspen Mix",6.6
+"52","Upper Boreal Highlands",15,2263,2165.67478929945,"Medium-Mesic Aspen Mix","#B1FF38",15,"15_Medium-Mesic Aspen Mix",2.2
+"53","Athabasca Plain",50,592,525.060480100419,"Medium-Mesic Boreal Aspen","#26FE00",17,"50_Medium-Mesic Boreal Aspen",0.5
+"54","Central Mixedwood",50,162530,161870.822318282,"Medium-Mesic Boreal Aspen","#26FE00",17,"50_Medium-Mesic Boreal Aspen",17.7
+"55","Lower Boreal Highlands",50,23743,22829.347976893,"Medium-Mesic Boreal Aspen","#26FE00",17,"50_Medium-Mesic Boreal Aspen",31.3
+"56","Upper Boreal Highlands",50,22703,22304.8815546518,"Medium-Mesic Boreal Aspen","#26FE00",17,"50_Medium-Mesic Boreal Aspen",22.2
+"57","Athabasca Plain",18,48,27.4546789251126,"Medium-Mesic White Spruce","#085401",18,"18_Medium-Mesic White Spruce",0
+"58","Central Mixedwood",18,34372,34232.8315751569,"Medium-Mesic White Spruce","#085401",18,"18_Medium-Mesic White Spruce",3.7
+"59","Lower Boreal Highlands",18,4164,4027.68227120285,"Medium-Mesic White Spruce","#085401",18,"18_Medium-Mesic White Spruce",5.5
+"60","Upper Boreal Highlands",18,455,416.737727763451,"Medium-Mesic White Spruce","#085401",18,"18_Medium-Mesic White Spruce",0.4
+"61","Athabasca Plain",20,188,160.355153268083,"Medium-Hygric Poplar Mix","#14C800",20,"20_Medium-Hygric Poplar Mix",0.1
+"62","Central Mixedwood",20,26049,25875.61786645,"Medium-Hygric Poplar Mix","#14C800",20,"20_Medium-Hygric Poplar Mix",2.8
+"63","Lower Boreal Highlands",20,5076,4904.69748700363,"Medium-Hygric Poplar Mix","#14C800",20,"20_Medium-Hygric Poplar Mix",6.7
+"64","Upper Boreal Highlands",20,152,114.082806325285,"Medium-Hygric Poplar Mix","#14C800",20,"20_Medium-Hygric Poplar Mix",0.1
+"65","Athabasca Plain",21,10,6.10837586969137,"Medium-Hygric Spruce Mix","#3CBC2F",21,"21_Medium-Hygric Spruce Mix",0
+"66","Central Mixedwood",21,8986,8944.77586608584,"Medium-Hygric Spruce Mix","#3CBC2F",21,"21_Medium-Hygric Spruce Mix",1
+"67","Lower Boreal Highlands",21,1483,1441.36073580087,"Medium-Hygric Spruce Mix","#3CBC2F",21,"21_Medium-Hygric Spruce Mix",2
+"68","Upper Boreal Highlands",21,30,17.4641049164347,"Medium-Hygric Spruce Mix","#3CBC2F",21,"21_Medium-Hygric Spruce Mix",0
+"69","Athabasca Plain",25,1205,1188.46530355327,"Medium-Hydric Shrub Fen","#9EB373",25,"25_Medium-Hydric Shrub Fen",1
+"70","Central Mixedwood",25,15332,15300.8884204078,"Medium-Hydric Shrub Fen","#9EB373",25,"25_Medium-Hydric Shrub Fen",1.7
+"71","Lower Boreal Highlands",25,775,767.720218263566,"Medium-Hydric Shrub Fen","#9EB373",25,"25_Medium-Hydric Shrub Fen",1.1
+"72","Upper Boreal Highlands",25,3139,3134.91824769974,"Medium-Hydric Shrub Fen","#9EB373",25,"25_Medium-Hydric Shrub Fen",3.1
+"73","Athabasca Plain",26,3764,3716.03791048305,"Medium-Hydric Black Spruce Fen","#75AC00",26,"26_Medium-Hydric Black Spruce Fen",3.2
+"74","Central Mixedwood",26,72623,72496.6769506717,"Medium-Hydric Black Spruce Fen","#75AC00",26,"26_Medium-Hydric Black Spruce Fen",7.9
+"75","Lower Boreal Highlands",26,242,237.786708652915,"Medium-Hydric Black Spruce Fen","#75AC00",26,"26_Medium-Hydric Black Spruce Fen",0.3
+"76","Upper Boreal Highlands",26,398,395.213291272521,"Medium-Hydric Black Spruce Fen","#75AC00",26,"26_Medium-Hydric Black Spruce Fen",0.4
+"77","Athabasca Plain",19,144,144,"Rich-Hygric Shrubland","#99FF89",28,"19_Rich-Hygric Shrubland",0.1
+"78","Central Mixedwood",19,2331,2330.14679884911,"Rich-Hygric Shrubland","#99FF89",28,"19_Rich-Hygric Shrubland",0.3
+"79","Lower Boreal Highlands",19,86,84.3939002603292,"Rich-Hygric Shrubland","#99FF89",28,"19_Rich-Hygric Shrubland",0.1
+"80","Upper Boreal Highlands",19,72,71.6060997247696,"Rich-Hygric Shrubland","#99FF89",28,"19_Rich-Hygric Shrubland",0.1
+"81","Athabasca Plain",29,4588,4546.49225928192,"Rich-Hygric Poplar","#00C89E",29,"29_Rich-Hygric Poplar",4
+"82","Central Mixedwood",29,14449,14388.208073297,"Rich-Hygric Poplar","#00C89E",29,"29_Rich-Hygric Poplar",1.6
+"83","Lower Boreal Highlands",29,485,444.107318038518,"Rich-Hygric Poplar","#00C89E",29,"29_Rich-Hygric Poplar",0.6
+"84","Upper Boreal Highlands",29,591,569.483732889523,"Rich-Hygric Poplar","#00C89E",29,"29_Rich-Hygric Poplar",0.6
+"85","Athabasca Plain",31,16196,16165.050926313,"Rich-Hygric Spruce","#0E995F",31,"31_Rich-Hygric Spruce",14.1
+"86","Central Mixedwood",31,5464,5428.67934573092,"Rich-Hygric Spruce","#0E995F",31,"31_Rich-Hygric Spruce",0.6
+"87","Lower Boreal Highlands",31,340,319.333769651596,"Rich-Hygric Spruce","#0E995F",31,"31_Rich-Hygric Spruce",0.4
+"88","Upper Boreal Highlands",31,447,431.907824686263,"Rich-Hygric Spruce","#0E995F",31,"31_Rich-Hygric Spruce",0.4
+"89","Athabasca Plain",32,1,0,"Rich-Hydric Grass Fen","#9FFFD7",32,"32_Rich-Hydric Grass Fen",0
+"90","Central Mixedwood",32,17,17,"Rich-Hydric Grass Fen","#9FFFD7",32,"32_Rich-Hydric Grass Fen",0
+"91","Lower Boreal Highlands",32,1,0,"Rich-Hydric Grass Fen","#9FFFD7",32,"32_Rich-Hydric Grass Fen",0
+"92","Upper Boreal Highlands",32,1,1,"Rich-Hydric Grass Fen","#9FFFD7",32,"32_Rich-Hydric Grass Fen",0
+"93","Athabasca Plain",33,1,0,"Rich-Hydric Shrub Fen","#2DFFA7",33,"33_Rich-Hydric Shrub Fen",0
+"94","Central Mixedwood",33,318,318,"Rich-Hydric Shrub Fen","#2DFFA7",33,"33_Rich-Hydric Shrub Fen",0
+"95","Lower Boreal Highlands",33,5,5,"Rich-Hydric Shrub Fen","#2DFFA7",33,"33_Rich-Hydric Shrub Fen",0
+"96","Upper Boreal Highlands",33,1,0,"Rich-Hydric Shrub Fen","#2DFFA7",33,"33_Rich-Hydric Shrub Fen",0
+"97","Athabasca Plain",34,1325,1290.55452221981,"Rich-Hydric Black Spruce","#0C5437",34,"34_Rich-Hydric Black Spruce",1.1
+"98","Central Mixedwood",34,34118,34055.4516904092,"Rich-Hydric Black Spruce","#0C5437",34,"34_Rich-Hydric Black Spruce",3.7
+"99","Lower Boreal Highlands",34,16,16,"Rich-Hydric Black Spruce","#0C5437",34,"34_Rich-Hydric Black Spruce",0
+"100","Upper Boreal Highlands",34,59,59,"Rich-Hydric Black Spruce","#0C5437",34,"34_Rich-Hydric Black Spruce",0.1
+"101","Athabasca Plain",35,535,524.330810499378,"Marsh","#AEEDFF",35,"35_Marsh",0.5
+"102","Central Mixedwood",35,3480,3463.36617097072,"Marsh","#AEEDFF",35,"35_Marsh",0.4
+"103","Lower Boreal Highlands",35,347,338.930154806003,"Marsh","#AEEDFF",35,"35_Marsh",0.5
+"104","Upper Boreal Highlands",35,108,102.906791672111,"Marsh","#AEEDFF",35,"35_Marsh",0.1
+"105","Athabasca Plain",39,2971,2938.53252323985,"Open Water","#071BD6",39,"39_Open Water",2.6
+"106","Central Mixedwood",39,14211,14169.8191001345,"Open Water","#071BD6",39,"39_Open Water",1.5
+"107","Lower Boreal Highlands",39,1132,1126.30449555814,"Open Water","#071BD6",39,"39_Open Water",1.5
+"108","Upper Boreal Highlands",39,2418,2406.92235758137,"Open Water","#071BD6",39,"39_Open Water",2.4
+"109","Athabasca Plain",52,1457,1445.41288532293,"Human-modified","#ACAC96",52,"52_Human-modified",1.3
+"110","Central Mixedwood",52,107485,107478.586738272,"Human-modified","#ACAC96",52,"52_Human-modified",11.7
+"111","Lower Boreal Highlands",52,2,0,"Human-modified","#ACAC96",52,"52_Human-modified",0
+"112","Upper Boreal Highlands",52,2,0,"Human-modified","#ACAC96",52,"52_Human-modified",0
+"113","Athabasca Plain",42,83,83,"Urban","#373737",62,"42_Urban",0.1
+"114","Central Mixedwood",42,6189,6156.86943018436,"Urban","#373737",62,"42_Urban",0.7
+"115","Lower Boreal Highlands",42,1,0,"Urban","#373737",62,"42_Urban",0
+"116","Upper Boreal Highlands",42,1,0,"Urban","#373737",62,"42_Urban",0

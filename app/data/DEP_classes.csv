@@ -1,0 +1,30 @@
+"","RasterNum","StralbergName","Color","DEPordNum"
+"1",1,"Poor-Xeric Grassland","#FFF0C6",1
+"2",2,"Poor-Xeric Jack Pine","#FF9E56",2
+"3",4,"Poor-Mesic Pine","#FFA627",4
+"4",5,"Poor-Mesic Black Spruce","#DBE628",5
+"5",6,"Poor-Hygric Black Spruce","#A6AE1F",6
+"6",7,"Poor-Hydric Black Spruce / Larch","#666B14",7
+"7",8,"Poor-Hydric Shrub ","#593E1F",8
+"8",9,"Medium-Xeric Grassland","#FFFD77",9
+"9",10,"Medium-Xeric Aspen Mix","#FFFB00",10
+"10",11,"Medium-Xeric Pine","#7D0C0C",11
+"11",12,"Medium-Xeric Spruce","#698222",12
+"12",13,"Medium-Mesic Grassland","#D5FF95",13
+"13",15,"Medium-Mesic Aspen Mix","#B1FF38",15
+"14",50,"Medium-Mesic Boreal Aspen","#26FE00",17
+"15",18,"Medium-Mesic White Spruce","#085401",18
+"16",20,"Medium-Hygric Poplar Mix","#14C800",20
+"17",21,"Medium-Hygric Spruce Mix","#3CBC2F",21
+"18",25,"Medium-Hydric Shrub Fen","#9EB373",25
+"19",26,"Medium-Hydric Black Spruce Fen","#75AC00",26
+"20",19,"Rich-Hygric Shrubland","#99FF89",28
+"21",29,"Rich-Hygric Poplar","#00C89E",29
+"22",31,"Rich-Hygric Spruce","#0E995F",31
+"23",32,"Rich-Hydric Grass Fen","#9FFFD7",32
+"24",33,"Rich-Hydric Shrub Fen","#2DFFA7",33
+"25",34,"Rich-Hydric Black Spruce","#0C5437",34
+"26",35,"Marsh","#AEEDFF",35
+"27",39,"Open Water","#071BD6",39
+"28",52,"Human-modified","#ACAC96",52
+"29",42,"Urban","#373737",62
