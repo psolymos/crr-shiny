@@ -129,13 +129,15 @@ output$MainMap <- renderUI({
                 layerId = "DEP_baselayer_on",
                 group = "Derived Ecosite Phase") %>%
   #COG
-    addRasterImage(
-    x = raster("./data/DEP_PROJleaflet.tif"),
-    colors = colorFactor(DEP_classes_map$Color, domain = DEP_classes_map$RasterNum, levels = NULL, ordered = FALSE, na.color = "#00000000", alpha = FALSE, reverse = FALSE),
-    opacity = 1,
-    maxBytes=2000*1024*1024,
-    project=F,
-    group = "Derived Ecosite Phase (Old)") %>%
+
+    # addRasterImage(
+    # x = raster("./data/DEP_PROJleaflet.tif"),
+    # colors = colorFactor(DEP_classes_map$Color, domain = DEP_classes_map$RasterNum, levels = NULL, ordered = FALSE, na.color = "#00000000", alpha = FALSE, reverse = FALSE),
+    # opacity = 1,
+    # maxBytes=2000*1024*1024,
+    # project=F,
+    # group = "Derived Ecosite Phase (Old)") %>%
+
   # addLegend(position = "topright",
   #             colors = subset(DEP_classes, X!=29 & X!=31)$Color,
   #             labels = subset(DEP_classes, X!=29 & X!=31)$StralbergName,
@@ -168,7 +170,7 @@ output$MainMap <- renderUI({
    #            group = "ABMI predictive landcover (3.0)") %>%
     addLayersControl(overlayGroups = c("ABMI predictive landcover (3.0)", "Derived Ecosite Phase", "Derived Ecosite Phase (Old)"), 
                      position = c("topright"),
-                     options = layersControlOptions(collapsed = F)) %>% hideGroup("ABMI predictive landcover (3.0)")  %>% hideGroup("Derived Ecosite Phase (Old)") 
+                     options = layersControlOptions(collapsed = F)) %>% hideGroup("ABMI predictive landcover (3.0)") # %>% hideGroup("Derived Ecosite Phase (Old)") 
   
 if(startsWith(data,"SurfaceMineableArea")) {
 

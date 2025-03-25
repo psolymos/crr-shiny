@@ -11,6 +11,8 @@ Scope of work:
 
 Original app: <https://albertaccrec.shinyapps.io/template1/>
 
+New deployment: <https://analythium.shinyapps.io/crr-shiny/>
+
 Install dependencies (from inside the `app` folder):
 
 ```R

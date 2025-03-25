@@ -23,7 +23,7 @@ library(shinyalert)
 # library(pushbar)        # install.packages("pushbar")
 # library(darkmode)     # remotes::install_github("colinfay/darkmode")
 #' @remote dreamRs/weather
-library(weather)        # remotes::install_github("dreamRs/weather")
+# library(weather)        # remotes::install_github("dreamRs/weather")
 library(reactlog)
 library(leaflet)
 # library(leafgl)
