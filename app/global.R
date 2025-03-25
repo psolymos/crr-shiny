@@ -8,9 +8,8 @@ library(shinyBS)
 library(shinyWidgets)
 library(shinydashboard)
 
-#need to downgrade the version of ShinydashboardPlus 
-require (devtools)
-install_version("shinydashboardPlus", version="0.7.5",repos = "http://cran.us.r-project.org")
+# need to downgrade the version of ShinydashboardPlus 
+#' @ver shinydashboardPlus 0.7.5
 library(shinydashboardPlus)
 
 
@@ -23,6 +22,7 @@ library(htmltools)
 library(shinyalert)
 # library(pushbar)        # install.packages("pushbar")
 # library(darkmode)     # remotes::install_github("colinfay/darkmode")
+#' @remote dreamRs/weather
 library(weather)        # remotes::install_github("dreamRs/weather")
 library(reactlog)
 library(leaflet)
@@ -33,10 +33,7 @@ library(leafsync)
 # library(leaflet.esri)
 library(sf)
 library(sp)
-library(rgdal)
 library(geojsonio)
-library(raster)
-library(gdalUtils)
 library(lwgeom)
 library(rasterVis)
 library(pals)
@@ -51,6 +48,12 @@ library(tidyr)
 library(rmdformats)
 library(plotly)
 library(formatR)
+library(raster)
+
+# problematic packages
+# library(rgdal)
+# library(gdalUtils)
+
 
 # Modules ----
 # source("./modules/mapUI.R")
@@ -58,7 +61,8 @@ library(formatR)
 
 
 # Other Code -----
-source("code/mapFunction.R")
+# this is now sourced from the ./R directory - but the mapFunction seems to be not in use
+# source("code/mapFunction.R")
 
 
 
@@ -121,4 +125,11 @@ convertMenuItem <- function(mi,tabName) {
   mi$children[[1]]$attribs['data-value'] = tabName
   mi
 } 
+
+# This CBMT link works
+NRCan_GeoGratis_CBMT_link <- "https://maps.geogratis.gc.ca/wms/CBMT?service=wms&version=1.3.0"
+
+# This geoserver is not up
+geoserver_link <- "https://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857"
+
 

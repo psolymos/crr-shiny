@@ -2,11 +2,11 @@ server <- function(input, output, session) {
 
   
   # to delete later
-observeEvent(input$keypressed,
-               {
-                 if(input$keypressed==27)
-                   stopApp()
-               })
+# observeEvent(input$keypressed,
+#                {
+#                  if(input$keypressed==27)
+#                    stopApp()
+#                })
 
 # Tab 1 ----------
   
@@ -73,7 +73,7 @@ output$MainMap <- renderUI({
         opacity = 1
       )
     ) %>%
-    addWMSTiles("http://maps.geogratis.gc.ca/wms/CBMT?service=wms&version=1.3.0",
+    addWMSTiles(NRCan_GeoGratis_CBMT_link,
                 layers = "CBMT",
                 attribution="NRCan GeoGratis",
                 group = "NRCan GeoGratis (CBMT)",
@@ -108,12 +108,12 @@ output$MainMap <- renderUI({
       crs = leafletCRS(),
       worldCopyJump = F)) %>%
     fitBounds(extent(SurfaceMineableArea)[1], extent(SurfaceMineableArea)[3], extent(SurfaceMineableArea)[2], extent(SurfaceMineableArea)[4]) %>%
-    addWMSTiles("http://maps.geogratis.gc.ca/wms/CBMT?service=wms&version=1.3.0",
+    addWMSTiles(NRCan_GeoGratis_CBMT_link,
                 layers = "CBMT",
                 attribution="NRCan GeoGratis",
                 group = "NRCan GeoGratis (CBMT)",
                 options = WMSTileOptions(format = "image/png", transparent = T, zIndex = -1, minZoom = minZoom, maxZoom = maxZoom, opacity = 1))    %>%
-  addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+  addWMSTiles(baseUrl = geoserver_link,
               layers= c("DEP_baselayer_on"),
               attribution="CFS NRCAN",
               options = WMSTileOptions(
@@ -134,7 +134,7 @@ output$MainMap <- renderUI({
   #             title = "DEP",
   #             layerId = "Derived Ecosite Phase Legend",
   #             group = "Derived Ecosite Phase") %>%
-    addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+    addWMSTiles(baseUrl = geoserver_link,
               layers= c("PLC30_OS_100_col"),
               attribution="CFS NRCAN",
               group = "ABMI predictive landcover (3.0)",
@@ -645,13 +645,13 @@ Tab2Map1 = leaflet(
         opacity = 1
       )
     ) %>%
-    addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+    addWMSTiles(baseUrl = geoserver_link,
                 layers= c("Stralberg_baseline_vegeco4top_mod_prj_on"),
                 attribution="CFS NRCAN",
                 options = WMSTileOptions(
                   opacity = 1,transparent = T,format="image/png"),
                 group = "Baseline ecosite (2018)") %>%
-  addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+  addWMSTiles(baseUrl = geoserver_link,
               layers= c("DEP_baselayer_on"),
               attribution="CFS NRCAN",
               options = WMSTileOptions(
@@ -664,7 +664,7 @@ Tab2Map1 = leaflet(
   #     maxBytes=2000*1024*1024,
   #     project=F,
   #     group = "VegChange Baseline")  %>%
-    addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+    addWMSTiles(baseUrl = geoserver_link,
                 layers= c("BaselineUpland_prj_on"),
                 attribution="CFS NRCAN",
                 options = WMSTileOptions(
@@ -677,7 +677,7 @@ Tab2Map1 = leaflet(
     #   maxBytes=2000*1024*1024,
     #   project=F,
     #   group = "Mask lowland")  %>%
-  addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+  addWMSTiles(baseUrl = geoserver_link,
               layers= c("PLC30_OS_100_prj_on"),
               attribution="CFS NRCAN",
               options = WMSTileOptions(
@@ -710,19 +710,19 @@ Tab2Map1 = leaflet(
         opacity = 1
       )
     ) %>%
-    addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+    addWMSTiles(baseUrl = geoserver_link,
                 layers= c(paste0(input$predType,"_", "20112040","_",input$climMod,"_prj_on")),
                 attribution="CFS NRCAN",
                 options = WMSTileOptions(
                   opacity = 1,transparent = T,format="image/png"),
                 group = "2011-2040 Period") %>%
-    addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+    addWMSTiles(baseUrl = geoserver_link,
                 layers= c(paste0(input$predType,"_", "20412070","_",input$climMod,"_prj_on")),
                 attribution="CFS NRCAN",
                 options = WMSTileOptions(
                   opacity = 1,transparent = T,format="image/png"),
                 group = "2041-2070 Period") %>%
-    addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+    addWMSTiles(baseUrl = geoserver_link,
                 layers= c(paste0(input$predType,"_", "20712100","_",input$climMod,"_prj_on")),
                 attribution="CFS NRCAN",
                 options = WMSTileOptions(
@@ -735,13 +735,13 @@ Tab2Map1 = leaflet(
     #   maxBytes=2000*1024*1024,
     #   project=F,
     #   group = "Mask lowland")  %>%
-    addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+    addWMSTiles(baseUrl = geoserver_link,
                 layers= c("BaselineUpland_prj_on"),
                 attribution="CFS NRCAN",
                 options = WMSTileOptions(
                   opacity = 1,transparent = T,format="image/png"),
                 group = "Mask lowland (2018 study)") %>%
-    addWMSTiles(baseUrl = "http://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857",
+    addWMSTiles(baseUrl = geoserver_link,
                 layers= c("PLC30_OS_100_prj_on"),
                 attribution="CFS NRCAN",
                 options = WMSTileOptions(

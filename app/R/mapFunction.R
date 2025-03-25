@@ -68,7 +68,7 @@ mapFunction<-function() {
         opacity = 1
       )
     ) %>%
-    addWMSTiles("http://maps.geogratis.gc.ca/wms/CBMT?service=wms&version=1.3.0",
+    addWMSTiles(NRCan_GeoGratis_CBMT_link,
                 layers = "CBMT",
                 group = "NRCan GeoGratis (CBMT)",
                 options = WMSTileOptions(format = "image/png", transparent = T, zIndex = -1, minZoom = minZoom, maxZoom = maxZoom, opacity = 1))   %>%
@@ -136,7 +136,7 @@ mapFunction<-function() {
   #             labels = c("Central Mixedwood", "Lower Boreal Highlands", "Upper Boreal Highlands"),
   #             opacity = 0.6,
   #             title = "Natural Subregion of Alberta") %>%
-  addWMSTiles("http://maps.geogratis.gc.ca/wms/CBMT?service=wms&version=1.3.0",
+  addWMSTiles(NRCan_GeoGratis_CBMT_link,
               layers = "CBMT",
               group = "NRCan GeoGratis (CBMT)",
               options = WMSTileOptions(format = "image/png", transparent = T, zIndex = -1, minZoom = minZoom, maxZoom = maxZoom, opacity = 1))  
