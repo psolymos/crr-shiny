@@ -132,4 +132,4 @@ NRCan_GeoGratis_CBMT_link <- "https://maps.geogratis.gc.ca/wms/CBMT?service=wms&
 # This geoserver is not up
 geoserver_link <- "https://ivanb.gistemp.com/geoserver/data/wms/service=WMS&version=1.1.0&request=GetMap&layers=data%3APLC30_OS_100_col&bbox=-1.34585454766E7%2C6260451.0369%2C-1.21423165921E7%2C8420920.5171&width=467&height=768&srs=EPSG%3A3857"
 
-
+fileserver_link <- "https://peter.solymos.org/crr-shiny/"

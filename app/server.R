@@ -113,12 +113,22 @@ output$MainMap <- renderUI({
                 attribution="NRCan GeoGratis",
                 group = "NRCan GeoGratis (CBMT)",
                 options = WMSTileOptions(format = "image/png", transparent = T, zIndex = -1, minZoom = minZoom, maxZoom = maxZoom, opacity = 1))    %>%
-  addWMSTiles(baseUrl = geoserver_link,
-              layers= c("DEP_baselayer_on"),
-              attribution="CFS NRCAN",
-              options = WMSTileOptions(
-                opacity = 1,transparent = T,format="image/png"),
-              group = "Derived Ecosite Phase") %>%
+  #WMS
+  # addWMSTiles(baseUrl = geoserver_link,
+  #             layers= c("DEP_baselayer_on"),
+  #             attribution="CFS NRCAN",
+  #             options = WMSTileOptions(
+  #               opacity = 1,transparent = T,format="image/png"),
+  #             group = "Derived Ecosite Phase") %>%
+  #WMS
+  #COG
+  leafem::addCOG(
+                url = paste0(fileserver_link, "base/DEP_baselayer_on.tif"),
+                rgb = TRUE,
+                attribution="CFS NRCAN",
+                layerId = "DEP_baselayer_on",
+                group = "Derived Ecosite Phase") %>%
+  #COG
     addRasterImage(
     x = raster("./data/DEP_PROJleaflet.tif"),
     colors = colorFactor(DEP_classes_map$Color, domain = DEP_classes_map$RasterNum, levels = NULL, ordered = FALSE, na.color = "#00000000", alpha = FALSE, reverse = FALSE),
@@ -134,11 +144,21 @@ output$MainMap <- renderUI({
   #             title = "DEP",
   #             layerId = "Derived Ecosite Phase Legend",
   #             group = "Derived Ecosite Phase") %>%
-    addWMSTiles(baseUrl = geoserver_link,
-              layers= c("PLC30_OS_100_col"),
-              attribution="CFS NRCAN",
-              group = "ABMI predictive landcover (3.0)",
-              options = WMSTileOptions(opacity = 1, format = "image/png", transparent = TRUE)) %>%
+  #WMS
+    # addWMSTiles(baseUrl = geoserver_link,
+    #           layers= c("PLC30_OS_100_col"),
+    #           attribution="CFS NRCAN",
+    #           group = "ABMI predictive landcover (3.0)",
+    #           options = WMSTileOptions(opacity = 1, format = "image/png", transparent = TRUE)) %>%
+  #WMS
+  #COG
+  leafem::addCOG(
+                url = paste0(fileserver_link, "base/PLC30_OS_100_col.tif"),
+                rgb = TRUE,
+                attribution="CFS NRCAN",
+                layerId = "PLC30_OS_100_col",
+                group = "ABMI predictive landcover (3.0)") %>%
+  #COG
    # addLegend(position = "topright",
    #            colors = c("#08306b", "#FEE391","#ADDD8E", "#8C510A", "#858F30", "#006D2C", "#F0AA45"),
    #            labels = c("Open water", "Fen", "Bog", "Marsh", "Swamp", "Upland", "Wetland general"),
@@ -645,18 +665,38 @@ Tab2Map1 = leaflet(
         opacity = 1
       )
     ) %>%
-    addWMSTiles(baseUrl = geoserver_link,
-                layers= c("Stralberg_baseline_vegeco4top_mod_prj_on"),
+  #WMS
+    # addWMSTiles(baseUrl = geoserver_link,
+    #             layers= c("Stralberg_baseline_vegeco4top_mod_prj_on"),
+    #             attribution="CFS NRCAN",
+    #             options = WMSTileOptions(
+    #               opacity = 1,transparent = T,format="image/png"),
+    #             group = "Baseline ecosite (2018)") %>%
+  #WMS
+  #COG
+  leafem::addCOG(
+                url = paste0(fileserver_link, "base/Stralberg_baseline_vegeco4top_mod_prj_on.tif"),
+                rgb = TRUE,
                 attribution="CFS NRCAN",
-                options = WMSTileOptions(
-                  opacity = 1,transparent = T,format="image/png"),
+                layerId = "Stralberg_baseline_vegeco4top_mod_prj_on",
                 group = "Baseline ecosite (2018)") %>%
-  addWMSTiles(baseUrl = geoserver_link,
-              layers= c("DEP_baselayer_on"),
-              attribution="CFS NRCAN",
-              options = WMSTileOptions(
-                opacity = 1,transparent = T,format="image/png"),
-              group = "DEP baseline") %>%
+  #COG
+  #WMS
+  # addWMSTiles(baseUrl = geoserver_link,
+  #             layers= c("DEP_baselayer_on"),
+  #             attribution="CFS NRCAN",
+  #             options = WMSTileOptions(
+  #               opacity = 1,transparent = T,format="image/png"),
+  #             group = "DEP baseline") %>%
+  #WMS
+  #COG
+  leafem::addCOG(
+                url = paste0(fileserver_link, "base/DEP_baselayer_on.tif"),
+                rgb = TRUE,
+                attribution="CFS NRCAN",
+                layerId = "DEP_baselayer_on",
+                group = "DEP baseline") %>%
+  #COG
   # addRasterImage(
   #     x = raster("./data/AB_VegChange/BaselineVeg/Stralberg_baseline_vegeco4top_mod_prj.tif"),
   #     colors = colorFactor(AB_VegChange_classes_map$Color, domain = AB_VegChange_classes_map$Code, levels = NULL, ordered = FALSE, na.color = "#00000000", alpha = FALSE, reverse = FALSE),
@@ -664,12 +704,22 @@ Tab2Map1 = leaflet(
   #     maxBytes=2000*1024*1024,
   #     project=F,
   #     group = "VegChange Baseline")  %>%
-    addWMSTiles(baseUrl = geoserver_link,
-                layers= c("BaselineUpland_prj_on"),
+  #WMS
+    # addWMSTiles(baseUrl = geoserver_link,
+    #             layers= c("BaselineUpland_prj_on"),
+    #             attribution="CFS NRCAN",
+    #             options = WMSTileOptions(
+    #               opacity = 1,transparent = T,format="image/png"),
+    #             group = "Mask lowland (2018 study)") %>%
+  #WMS
+  #COG
+  leafem::addCOG(
+                url = paste0(fileserver_link, "base/BaselineUpland_prj_on.tif"),
+                rgb = TRUE,
                 attribution="CFS NRCAN",
-                options = WMSTileOptions(
-                  opacity = 1,transparent = T,format="image/png"),
+                layerId = "BaselineUpland_prj_on",
                 group = "Mask lowland (2018 study)") %>%
+  #COG
     # addRasterImage(
     #   x = raster("./data/AB_VegChange/BaselineVeg/BaselineUpland_prj.tif"),
     #   colors = c("grey90", NA),
@@ -677,12 +727,22 @@ Tab2Map1 = leaflet(
     #   maxBytes=2000*1024*1024,
     #   project=F,
     #   group = "Mask lowland")  %>%
-  addWMSTiles(baseUrl = geoserver_link,
-              layers= c("PLC30_OS_100_prj_on"),
-              attribution="CFS NRCAN",
-              options = WMSTileOptions(
-                opacity = 1,transparent = T,format="image/png"),
-              group = "Mask lowland (ABMI landcover)") %>%
+  #WMS
+  # addWMSTiles(baseUrl = geoserver_link,
+  #             layers= c("PLC30_OS_100_prj_on"),
+  #             attribution="CFS NRCAN",
+  #             options = WMSTileOptions(
+  #               opacity = 1,transparent = T,format="image/png"),
+  #             group = "Mask lowland (ABMI landcover)") %>%
+  #WMS
+  #COG
+  leafem::addCOG(
+                url = paste0(fileserver_link, "base/PLC30_OS_100_prj_on.tif"),
+                rgb = TRUE,
+                attribution="CFS NRCAN",
+                layerId = "PLC30_OS_100_prj_on",
+                group = "Mask lowland (ABMI landcover)") %>%
+  #COG
   addLayersControl(overlayGroups = c("Mask lowland (2018 study)", "Mask lowland (ABMI landcover)"), 
                    baseGroups = c("Baseline ecosite (2018)", "DEP baseline"),
                    position = c("topright"),
@@ -710,24 +770,64 @@ Tab2Map1 = leaflet(
         opacity = 1
       )
     ) %>%
-    addWMSTiles(baseUrl = geoserver_link,
-                layers= c(paste0(input$predType,"_", "20112040","_",input$climMod,"_prj_on")),
+  #WMS
+    # addWMSTiles(baseUrl = geoserver_link,
+    #             layers= c(paste0(input$predType,"_", "20112040","_",input$climMod,"_prj_on")),
+    #             attribution="CFS NRCAN",
+    #             options = WMSTileOptions(
+    #               opacity = 1,transparent = T,format="image/png"),
+    #             group = "2011-2040 Period") %>%
+    # addWMSTiles(baseUrl = geoserver_link,
+    #             layers= c(paste0(input$predType,"_", "20412070","_",input$climMod,"_prj_on")),
+    #             attribution="CFS NRCAN",
+    #             options = WMSTileOptions(
+    #               opacity = 1,transparent = T,format="image/png"),
+    #             group = "2041-2070 Period") %>%
+    # addWMSTiles(baseUrl = geoserver_link,
+    #             layers= c(paste0(input$predType,"_", "20712100","_",input$climMod,"_prj_on")),
+    #             attribution="CFS NRCAN",
+    #             options = WMSTileOptions(
+    #               opacity = 1,transparent = T,format="image/png"),
+    #             group = "2071-2100 Period") %>%
+  #WMS
+  #COG
+  leafem::addCOG(
+                url = paste0(
+                  fileserver_link, 
+                  switch(input$predType,
+                    "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
+                    "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
+                    "Stralberg" = "scenarios/climate-driven/"),
+                  input$predType, "_20112040_",input$climMod,"_prj_on.tif"),
+                rgb = TRUE,
                 attribution="CFS NRCAN",
-                options = WMSTileOptions(
-                  opacity = 1,transparent = T,format="image/png"),
+                layerId = "20112040",
                 group = "2011-2040 Period") %>%
-    addWMSTiles(baseUrl = geoserver_link,
-                layers= c(paste0(input$predType,"_", "20412070","_",input$climMod,"_prj_on")),
+  leafem::addCOG(
+                url = paste0(
+                  fileserver_link, 
+                  switch(input$predType,
+                    "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
+                    "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
+                    "Stralberg" = "scenarios/climate-driven/"),
+                  input$predType, "_20412070_",input$climMod,"_prj_on.tif"),
+                rgb = TRUE,
                 attribution="CFS NRCAN",
-                options = WMSTileOptions(
-                  opacity = 1,transparent = T,format="image/png"),
+                layerId = "20412070",
                 group = "2041-2070 Period") %>%
-    addWMSTiles(baseUrl = geoserver_link,
-                layers= c(paste0(input$predType,"_", "20712100","_",input$climMod,"_prj_on")),
+  leafem::addCOG(
+                url = paste0(
+                  fileserver_link, 
+                  switch(input$predType,
+                    "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
+                    "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
+                    "Stralberg" = "scenarios/climate-driven/"),
+                  input$predType, "_20712100_",input$climMod,"_prj_on.tif"),
+                rgb = TRUE,
                 attribution="CFS NRCAN",
-                options = WMSTileOptions(
-                  opacity = 1,transparent = T,format="image/png"),
+                layerId = "20712100",
                 group = "2071-2100 Period") %>%
+  #COG
     # addRasterImage(
     #   x = raster("./data/AB_VegChange/BaselineVeg/BaselineUpland_prj.tif"),
     #   colors = c("grey90", NA),
@@ -735,18 +835,34 @@ Tab2Map1 = leaflet(
     #   maxBytes=2000*1024*1024,
     #   project=F,
     #   group = "Mask lowland")  %>%
-    addWMSTiles(baseUrl = geoserver_link,
-                layers= c("BaselineUpland_prj_on"),
+  #WMS
+    # addWMSTiles(baseUrl = geoserver_link,
+    #             layers= c("BaselineUpland_prj_on"),
+    #             attribution="CFS NRCAN",
+    #             options = WMSTileOptions(
+    #               opacity = 1,transparent = T,format="image/png"),
+    #             group = "Mask lowland (2018 study)") %>%
+    # addWMSTiles(baseUrl = geoserver_link,
+    #             layers= c("PLC30_OS_100_prj_on"),
+    #             attribution="CFS NRCAN",
+    #             options = WMSTileOptions(
+    #               opacity = 1,transparent = T,format="image/png"),
+    #             group = "Mask lowland (ABMI landcover)") %>%
+  #WMS
+  #COG
+  leafem::addCOG(
+                url = paste0(fileserver_link, "base/BaselineUpland_prj_on.tif"),
+                rgb = TRUE,
                 attribution="CFS NRCAN",
-                options = WMSTileOptions(
-                  opacity = 1,transparent = T,format="image/png"),
+                layerId = "BaselineUpland_prj_on",
                 group = "Mask lowland (2018 study)") %>%
-    addWMSTiles(baseUrl = geoserver_link,
-                layers= c("PLC30_OS_100_prj_on"),
+  leafem::addCOG(
+                url = paste0(fileserver_link, "base/PLC30_OS_100_prj_on.tif"),
+                rgb = TRUE,
                 attribution="CFS NRCAN",
-                options = WMSTileOptions(
-                  opacity = 1,transparent = T,format="image/png"),
+                layerId = "PLC30_OS_100_prj_on",
                 group = "Mask lowland (ABMI landcover)") %>%
+  #COG
     addLayersControl(overlayGroups = c("Mask lowland (2018 study)", "Mask lowland (ABMI landcover)"), 
                      baseGroups = c("2011-2040 Period", "2041-2070 Period", "2071-2100 Period"),
                      position = c("topright"),

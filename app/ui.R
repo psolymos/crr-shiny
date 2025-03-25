@@ -48,9 +48,9 @@ sidebar = dashboardSidebar(
             label=p(icon("chart-line"),"Scenario"),
             selected="ab_veg_fm_c", 
             choices=c("Choose a scenario"="",
-                      "Fire-mediated, constrained" ="ab_veg_fm_c",
-                      "Fire-mediated, unconstrained" ="ab_veg_fm_uc",
-                      "Climate Driven" ="Stralberg"
+                      "Fire-mediated, constrained" = "ab_veg_fm_c",
+                      "Fire-mediated, unconstrained" = "ab_veg_fm_uc",
+                      "Climate Driven" = "Stralberg"
             ),
             multiple=F,
             width="100%"
