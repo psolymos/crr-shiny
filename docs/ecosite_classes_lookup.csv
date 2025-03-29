@@ -1,0 +1,86 @@
+"Classification","EcositeStateID","Code"
+"Poor-Xeric Grassland",1,1
+"Poor-Xeric Jack Pine",2,2
+"Poor-Xeric Jack Pine",100,2
+"Poor-Xeric Jack Pine",105,2
+"Poor-Xeric Jack Pine",106,2
+"Poor-Mesic Grassland",5,3
+"Poor-Mesic Pine",4,4
+"Poor-Mesic Pine",102,4
+"Poor-Mesic Pine",113,4
+"Poor-Mesic Pine",114,4
+"Poor-Mesic Black Spruce",4,5
+"Poor-Hygric Black Spruce",6,6
+"Poor-Hygric Black Spruce",103,6
+"Poor-Hygric Black Spruce",125,6
+"Poor-Hygric Black Spruce",126,6
+"Poor-Hydric Black Spruce / Larch",7,7
+"Poor-Hydric Black Spruce / Larch",127,7
+"Poor-Hydric Black Spruce / Larch",128,7
+"Poor-Hydric Shrub",8,8
+"Medium-Xeric Grassland",9,9
+"Medium-Xeric Aspen Mix",10,10
+"Medium-Xeric Aspen Mix",109,10
+"Medium-Xeric Aspen Mix",110,10
+"Medium-Xeric Pine",11,11
+"Medium-Xeric Pine",101,11
+"Medium-Xeric Pine",107,11
+"Medium-Xeric Pine",108,11
+"Medium-Xeric Spruce",12,12
+"Medium-Xeric Spruce",111,12
+"Medium-Xeric Spruce",112,12
+"Medium-Mesic Grassland",13,13
+"Medium-Mesic Aspen",17,14
+"Medium-Mesic Aspen",115,14
+"Medium-Mesic Aspen",116,14
+"Medium-Mesic Aspen Mix",15,15
+"Medium-Mesic Aspen Mix",117,15
+"Medium-Mesic Aspen Mix",118,15
+"Medium-Mesic Pine",17,16
+"Medium-Mesic Pine Mix",17,17
+"Medium-Mesic White Spruce",18,18
+"Medium-Mesic White Spruce",104,18
+"Medium-Mesic White Spruce",119,18
+"Medium-Mesic White Spruce",120,18
+"Medium-Hygric Grassland",77,19
+"Medium-Hygric Poplar Mix",20,20
+"Medium-Hygric Poplar Mix",121,20
+"Medium-Hygric Poplar Mix",122,20
+"Medium-Hygric Spruce Mix",21,21
+"Medium-Hygric Spruce Mix",123,21
+"Medium-Hygric Spruce Mix",124,21
+"Medium-Hygric Black Spruce Mix",6,22
+"Alpine",43,23
+"Barren",43,24
+"Medium-Hydric Shrub (Poor Fen)",25,25
+"Medium-Hydric Black Spruce Fen (Poor Fen)",26,26
+"Medium-Hydric Black Spruce Fen (Poor Fen)",129,26
+"Medium-Hydric Black Spruce Fen (Poor Fen)",130,26
+"Rich-Mesic Grassland",77,27
+"Rich-Hygric Shrubland",NA,28
+"Rich-Hygric Poplar",20,29
+"Rich-Hygric Lodgepole Pine",34,30
+"Rich-Hygric Lodgepole Pine",131,30
+"Rich-Hygric Lodgepole Pine",132,30
+"Rich-Hygric Spruce",21,31
+"Rich-Hydric Grass Fen",32,32
+"Rich-Hydric Shrub Fen",32,33
+"Rich-Hydric Black Spruce",34,34
+"Shrub Swamp",35,35
+"Treed Swamp",NA,36
+"Very Rich-Hydric Marsh",NA,37
+"Alkali-Hydric",NA,38
+"Lake",39,39
+"River",NA,40
+"Agriculture",41,41
+"Urban",42,42
+"Other Non-Fuel",43,43
+"Medium-Mesic Aspen Boreal Mixedwood",17,50
+"Other Non-Fuel",52,43
+"Other Non-Fuel",53,43
+"Other Non-Fuel",54,43
+"Other Non-Fuel",55,43
+"Other Non-Fuel",56,43
+"Other Non-Fuel",57,43
+"Other Non-Fuel",66,43
+"Other Non-Fuel",99,43
