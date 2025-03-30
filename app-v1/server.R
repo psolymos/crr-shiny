@@ -376,9 +376,8 @@ output$Plot1 <- renderPlotly({
       distinct(Txtrcls, .keep_all = T)%>% 
       add_trace(y=~Txtrcls_num, x=~texture_Areaha_all ,
                 type="bar", orientation = 'h',  marker=list(color=Soil_texture_classes$color),
-                text = ~paste0("NSR: all<br>", "Soil texture: ", Txtrcls, "<br>", round(texture_Areaha_all, 0), " ha<br>", texture_Areaha_perc_all, "%"),
+                hovertext = ~paste0("NSR: all<br>", "Soil texture: ", Txtrcls, "<br>", round(texture_Areaha_all, 0), " ha<br>", texture_Areaha_perc_all, "%"),
                 hoverinfo = 'text',
-                # hovertemplate = "NSR: all<br>Soil texture: %{Txtrcls}<br>%{texture_Areaha_all:$.0f} ha<br>%{texture_Areaha_perc_all}%",
                 showlegend=F) %>%
       layout(yaxis = list(title = "", showticklabels = F, autorange="reversed"),
              xaxis = list(title = "Area by texture class <br>within selected boundary (ha)"),
@@ -393,7 +392,7 @@ output$Plot1 <- renderPlotly({
       plot_ly() %>% 
       add_trace(y=~Txtrcls_num, x=~texture_Areaha ,
                 type="bar", orientation = 'h',  marker=list(color=Soil_texture_classes$color),
-                name=~NSRNAME, text = ~paste0("NSR: ", NSRNAME, "<br>", "Soil texture: ", Txtrcls, "<br>", round(texture_Areaha, 0), " ha<br>", texture_Areaha_perc, "%"), 
+                name=~NSRNAME, hovertext = ~paste0("NSR: ", NSRNAME, "<br>", "Soil texture: ", Txtrcls, "<br>", round(texture_Areaha, 0), " ha<br>", texture_Areaha_perc, "%"), 
                 hoverinfo = 'text', showlegend=F) %>%
       layout(yaxis = list(title = "", showticklabels = F, autorange="reversed"),
              xaxis = list(title = "Area by texture class <br>within selected boundary (ha)"),
@@ -444,7 +443,7 @@ output$Plot2 <- renderPlotly({
       distinct(Landcover_class, .keep_all = T)%>% 
       plot_ly() %>% 
       add_trace(y=~Landcover_class, x=~PLC_Area_all,
-                type="bar", orientation = 'h', marker=list(color=LC_ABMI_colors), text = ~paste0("NSR: all", "<br>", "Landcover class: ", Landcover_class_name, "<br>", round(PLC_Area_all, 0), " ha<br>", PLC_Area_perc_all, "%"), hoverinfo = 'text', showlegend=F) %>%
+                type="bar", orientation = 'h', marker=list(color=LC_ABMI_colors), hovertext = ~paste0("NSR: all", "<br>", "Landcover class: ", Landcover_class_name, "<br>", round(PLC_Area_all, 0), " ha<br>", PLC_Area_perc_all, "%"), hoverinfo = 'text', showlegend=F) %>%
       layout(yaxis = list(title = "", showticklabels = F, autorange="reversed"),
              xaxis = list(title = "Area within selected boundary (ha)"),
              legend = list(orientation = 'h'),
@@ -457,7 +456,7 @@ output$Plot2 <- renderPlotly({
       plot_ly() %>% 
       add_trace(y=~Landcover_class, x=~PLC_Area,
                 type="bar", orientation = 'h', marker=list(color=LC_ABMI_colors),
-                name=~NSRNAME, text = ~paste0("NSR: ", NSRNAME, "<br>", "Landcover class: ", Landcover_class_name, "<br>", round(PLC_Area, 0), " ha<br>", PLC_Area_perc, "%"), 
+                name=~NSRNAME, hovertext = ~paste0("NSR: ", NSRNAME, "<br>", "Landcover class: ", Landcover_class_name, "<br>", round(PLC_Area, 0), " ha<br>", PLC_Area_perc, "%"), 
                 hoverinfo = 'text', showlegend=F) %>%
       layout(yaxis = list(title = "", showticklabels = F, autorange="reversed"),
              xaxis = list(title = "Area within selected boundary (ha)"),
@@ -495,7 +494,7 @@ output$Plot3 <- renderPlotly({
       group_by(DEP_ecosite) %>%
       mutate(DEP_Area_perc_all=round(sum(DEP_Area, na.rm = T)/sum(plot3_dataset$DEP_Area, na.rm = T)*100,1))   %>% 
     plot_ly() %>% 
-      add_trace(y=~as.factor(DEPordNum), x=~DEP_Area, color =~as.factor(DEPordNum), colors=~Color,  width=0.9, name=~Classification , text = ~paste0("NSR: all", "<br>", "Ecosite: ", Classification , "<br>", round(DEP_Area, 0), " ha<br>", DEP_Area_perc_all, "%"), 
+      add_trace(y=~as.factor(DEPordNum), x=~DEP_Area, color =~as.factor(DEPordNum), colors=~Color,  width=0.9, name=~Classification , hovertext = ~paste0("NSR: all", "<br>", "Ecosite: ", Classification , "<br>", round(DEP_Area, 0), " ha<br>", DEP_Area_perc_all, "%"), 
                 hoverinfo = 'text', showlegend=F, 
                 type="bar", orientation = 'h') %>%
       layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
@@ -507,7 +506,7 @@ output$Plot3 <- renderPlotly({
     
     subset(plot3_dataset, NSRNAME==input$NSRSel) %>% 
       plot_ly() %>% 
-      add_trace(y=~as.factor(DEPordNum), x=~DEP_Area, color =~as.factor(DEPordNum), colors=~Color, width=0.9, name=~Classification , text = ~paste0("Ecosite: ", Classification , "<br>", round(DEP_Area, 0), " ha<br>", DEP_Area_perc, "%"), 
+      add_trace(y=~as.factor(DEPordNum), x=~DEP_Area, color =~as.factor(DEPordNum), colors=~Color, width=0.9, name=~Classification , hovertext = ~paste0("Ecosite: ", Classification , "<br>", round(DEP_Area, 0), " ha<br>", DEP_Area_perc, "%"), 
                 hoverinfo = 'text', showlegend=F, 
                 type="bar", orientation = 'h') %>%
       layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
@@ -949,7 +948,7 @@ Tab2Plot0 =  AB_VegChange_NSR_summ %>%
   ungroup() %>%
   mutate(ecosite_Area_perc_NSR_all=round(ecosite_Area_NSR_all/sum(ecosite_Area_NSR_all)*100, 0)) %>%
   plot_ly() %>% 
-      add_trace(y=~as.factor(ClassordNum), x=~ecosite_Area_NSR_all, color =~as.factor(ClassordNum), colors=~Color,  width=0.9, name=~Classification, text = ~paste0("NSR: all", "<br>", "Ecosite: ", Classification, "<br>", round(ecosite_Area_NSR_all, 0), " ha<br>", ecosite_Area_perc_NSR_all, "%"), 
+      add_trace(y=~as.factor(ClassordNum), x=~ecosite_Area_NSR_all, color =~as.factor(ClassordNum), colors=~Color,  width=0.9, name=~Classification, hovertext = ~paste0("NSR: all", "<br>", "Ecosite: ", Classification, "<br>", round(ecosite_Area_NSR_all, 0), " ha<br>", ecosite_Area_perc_NSR_all, "%"), 
                 hoverinfo = 'text', showlegend=F, 
                 type="bar", orientation = 'h') %>%
       layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
@@ -963,7 +962,7 @@ Tab2Plot1 =  AB_VegChange_NSR_summ %>%
   ungroup() %>%
   mutate(ecosite_Area_perc_NSR_all=round(ecosite_Area_NSR_all/sum(ecosite_Area_NSR_all)*100, 0)) %>%
   plot_ly() %>% 
-  add_trace(y=~as.factor(ClassordNum), x=~ecosite_Area_NSR_all, color =~as.factor(ClassordNum), colors=~Color,  width=0.9, name=~Classification, text = ~paste0("NSR: all", "<br>", "Ecosite: ", Classification, "<br>", round(ecosite_Area_NSR_all, 0), " ha<br>", ecosite_Area_perc_NSR_all, "%"), 
+  add_trace(y=~as.factor(ClassordNum), x=~ecosite_Area_NSR_all, color =~as.factor(ClassordNum), colors=~Color,  width=0.9, name=~Classification, hovertext = ~paste0("NSR: all", "<br>", "Ecosite: ", Classification, "<br>", round(ecosite_Area_NSR_all, 0), " ha<br>", ecosite_Area_perc_NSR_all, "%"), 
             hoverinfo = 'text', showlegend=F, 
             type="bar", orientation = 'h') %>%
   layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
@@ -982,7 +981,7 @@ subplot(list(Tab2Plot0, Tab2Plot1), shareX = T, titleX = T, nrows=2, heights= c(
     
 Tab2Plot3 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>% 
   plot_ly() %>% 
-  add_trace(y=~as.factor(ClassordNum), x=as.formula(paste0("~", varname0)), color =~as.factor(ClassordNum), colors=~Color, width=0.9, name=~Classification, text = ~paste0("Ecosite: ", Classification, "<br>", round(get(varname0), 0), " ha<br>", round(get(varname0perc), 0), "%"), 
+  add_trace(y=~as.factor(ClassordNum), x=as.formula(paste0("~", varname0)), color =~as.factor(ClassordNum), colors=~Color, width=0.9, name=~Classification, hovertext = ~paste0("Ecosite: ", Classification, "<br>", round(get(varname0), 0), " ha<br>", round(get(varname0perc), 0), "%"), 
                 hoverinfo = 'text', showlegend=F, 
                 type="bar", orientation = 'h') %>%
       layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
@@ -992,7 +991,7 @@ Tab2Plot3 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>%
     
 Tab2Plot4 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>% 
   plot_ly() %>% 
-  add_trace(y=~as.factor(ClassordNum), x=as.formula(paste0("~", varname)), color =~as.factor(ClassordNum), colors=~Color, width=0.9, name=~Classification, text = ~paste0("Ecosite: ", Classification, "<br>", round(get(varname), 0), " ha<br>", round(get(varnameperc), 0), "%"), 
+  add_trace(y=~as.factor(ClassordNum), x=as.formula(paste0("~", varname)), color =~as.factor(ClassordNum), colors=~Color, width=0.9, name=~Classification, hovertext = ~paste0("Ecosite: ", Classification, "<br>", round(get(varname), 0), " ha<br>", round(get(varnameperc), 0), "%"), 
             hoverinfo = 'text', showlegend=F, 
             type="bar", orientation = 'h') %>%
   layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
