@@ -201,7 +201,7 @@ output$Tab2Plot <- renderPlotly({
   
 if(is.null(input$Tab2NSRSel) | input$Tab2NSRSel=="" | input$Tab2NSRSel=="all NSRs") {
     
-Tab2Plot0 =  AB_VegChange_NSR_summ %>% 
+Tab2Plot0 =  area_nsr_ecosite %>% 
   group_by(ClassordNum, Classification, Color) %>% 
   summarize(ecosite_Area_NSR_all=sum(get(varname0), na.rm = T), .groups = 'keep') %>%
   ungroup() %>%
@@ -215,7 +215,7 @@ Tab2Plot0 =  AB_VegChange_NSR_summ %>%
              margin = list(l=0),
              hovermode = 'y unified')
 
-Tab2Plot1 =  AB_VegChange_NSR_summ %>% 
+Tab2Plot1 =  area_nsr_ecosite %>% 
   group_by(ClassordNum, Classification, Color) %>% 
   summarize(ecosite_Area_NSR_all=sum(get(varname), na.rm = T), .groups = 'keep') %>%
   ungroup() %>%
@@ -238,7 +238,7 @@ subplot(list(Tab2Plot0, Tab2Plot1), shareX = T, titleX = T, nrows=2, heights= c(
 
   } else  { 
     
-Tab2Plot3 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>% 
+Tab2Plot3 <- subset(area_nsr_ecosite, NSRNAME==input$Tab2NSRSel) %>% 
   plot_ly() %>% 
   add_trace(y=~as.factor(ClassordNum), x=as.formula(paste0("~", varname0)), color =~as.factor(ClassordNum), colors=~Color, width=0.9, name=~Classification, hovertext = ~paste0("Ecosite: ", Classification, "<br>", round(get(varname0), 0), " ha<br>", round(get(varname0perc), 0), "%"), 
                 hoverinfo = 'text', showlegend=F, 
@@ -248,7 +248,7 @@ Tab2Plot3 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>%
              margin = list(l=0),
              hovermode = 'y unified')
     
-Tab2Plot4 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>% 
+Tab2Plot4 <- subset(area_nsr_ecosite, NSRNAME==input$Tab2NSRSel) %>% 
   plot_ly() %>% 
   add_trace(y=~as.factor(ClassordNum), x=as.formula(paste0("~", varname)), color =~as.factor(ClassordNum), colors=~Color, width=0.9, name=~Classification, hovertext = ~paste0("Ecosite: ", Classification, "<br>", round(get(varname), 0), " ha<br>", round(get(varnameperc), 0), "%"), 
             hoverinfo = 'text', showlegend=F, 
@@ -271,8 +271,8 @@ output$Tab2legend <- renderPlot({
   
   par(mar=c(0,0,0,0))
   legend = plot(NULL ,xaxt='n',yaxt='n',bty='n',ylab='',xlab='', xlim=0:1, ylim=0:1)
-  legend(x=0.2, y=1.03, legend =AB_VegChange_classes$Classification, pch=15, pt.cex=1.45, cex=0.60, bty='n',
-         col = AB_VegChange_classes$Color)
+  legend(x=0.2, y=1.03, legend =ecosite_classes$Classification, pch=15, pt.cex=1.45, cex=0.60, bty='n',
+         col = ecosite_classes$Color)
   
 })
 

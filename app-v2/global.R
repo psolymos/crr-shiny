@@ -25,8 +25,8 @@ library(terra)
 minZoom = 5
 maxZoom = 12
 
-AB_VegChange_NSR_summ = read.csv("./data/AB_VegChange_NSR_summ.csv")
-AB_VegChange_classes = read.csv("./data/AB_VegChange_classes.csv")
+area_nsr_ecosite <- read.csv("./data/area_nsr_ecosite.csv") # AB_VegChange_NSR_summ
+ecosite_classes <- read.csv("./data/ecosite_classes.csv") # AB_VegChange_classes
 
 convertMenuItem <- function(mi,tabName) {
   mi$children[[1]]$attribs['data-toggle']="tab"
