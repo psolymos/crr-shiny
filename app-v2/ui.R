@@ -14,33 +14,11 @@ sidebar = dashboardSidebar(
   width = "20vw",
   sidebarMenu(
         id = "tabs",
-        # convertMenuItem(menuItem( style="background-color: #3e5b66; ",
-        #   text = "1. Study area/data explorer",
-        #   tabName = "tab1",
-        #   selected = F,
-        #   startExpanded = T,
-        #   div(h4("Select Area of Interest", align = "center", style="font-family: Roboto; text-decoration: underline; padding-top: 1vh; ")),
-        #   fluidRow( style="padding-left:1vmax; padding-right: 1vmax;",
-        #             radioGroupButtons(
-        #               inputId = "BoundarySel",
-        #               size = "normal",
-        #               direction = "vertical",
-        #               choices=c(
-        #                 "Oil Sands Mineable Area" = "SurfaceMineableArea",
-        #                 "AOESRP soil map" = "AOSERP_soils_bdr",
-        #                 "Natural Subregions of Alberta" = "NSR_simpl"
-        #               ),
-        #               selected = "SurfaceMineableArea",
-        #               checkIcon = list(yes = icon("check")),
-        #               justified = T,
-        #               individual = T
-        #                   ))
-        #   ), 'tab1'),
         convertMenuItem(menuItem(
           text = "Vegetation responses to climate change",
           tabName = "tab2",
           selected = F,
-          startExpanded = F,
+          startExpanded = T,
           fluidRow(selectInput(
             inputId = "predType",
             label=p(icon("chart-line"),"Scenario"),
@@ -94,30 +72,6 @@ nsr_list <- c("Alpine", "Athabasca Plain", "Boreal Subarctic", "Central Mixedwoo
 
 body = dashboardBody(
   tabItems(
-    # tabItem(
-    #   tabName = "tab1",
-    #   fluidRow(style = "padding-left: 0px; padding-top: 0px; padding-right: 0px; ",
-    #             column(width = 10, style = "padding-left: 0px; padding-right: 0px; ",
-    #                    uiOutput("MainMap")),
-    #            column(width = 2, style = "padding-left: 0px; ",
-    #                   selectInput(inputId="GraphSel",label="Select summary graph", multiple=F, selected="DEP", width = '100%',
-    #                               choices = c("Choose layer:" = "",
-    #                                           "DEP",
-    #                                           "Soils",
-    #                                           "ABMI landcover")),
-    #                   selectInput(inputId="NSRSel",label=NULL, multiple=F, selected="", width = '80%',
-    #                               choices = c("Choose NSR:" = "", MinableArea_NSR_list)),
-    #                   uiOutput(("figuresUI")),
-    #                   br(),
-    #                   downloadBttn(outputId="DownloadData",
-    #                                label = "Download Summary Data",
-    #                                style="fill",
-    #                                color="success",
-    #                                size="md",
-    #                                no_outline=T)
-    #                   )
-    #            )
-    #  ),
     tabItem(
       tabName = "tab2", 
       fluidRow(style = "padding-left: 0px; padding-top: 0px; padding-right: 0px; ",
@@ -135,14 +89,14 @@ body = dashboardBody(
                column(width = 2, style = "padding-left: 0px; ",
                       selectInput(inputId="Tab2NSRSel",label=NULL, multiple=F, selected="", width = '80%',
                                   choices = c("Choose NSR:" = "", nsr_list)),
-                      fluidRow(plotlyOutput(outputId = "Tab2Plot", height = "80vh")),
-                      br(),
-                      downloadBttn(outputId="Tab2DownloadData",
-                                   label = "Download Summary Data",
-                                   style="fill",
-                                   color="success",
-                                   size="md",
-                                   no_outline=T)
+                      fluidRow(plotlyOutput(outputId = "Tab2Plot", height = "80vh"))#,
+                      # br(),
+                      # downloadBttn(outputId="Tab2DownloadData",
+                      #              label = "Download Summary Data",
+                      #              style="fill",
+                      #              color="success",
+                      #              size="md",
+                      #              no_outline=T)
                   )
                )
       )

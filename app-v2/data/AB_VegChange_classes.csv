@@ -1,0 +1,45 @@
+"RasterNum","Classification","Upland","Color","DEPordNum"
+1,"Poor-Xeric Grassland",1,"#FFF0C6",1
+2,"Poor-Xeric Jack Pine",1,"#FF9E56",2
+3,"Poor-Mesic Grassland",1,"#FFE7A6",3
+4,"Poor-Mesic Pine",1,"#FFA627",4
+5,"Poor-Mesic Black Spruce",1,"#DBE628",5
+6,"Poor-Hygric Black Spruce",0,"#A6AE1F",6
+7,"Poor-Hydric Black Spruce / Larch",0,"#666B14",7
+8,"Poor-Hydric Shrub",0,"#593E1F",8
+9,"Medium-Xeric Grassland",1,"#FFFD77",9
+10,"Medium-Xeric Aspen Mix",1,"#FFFB00",10
+11,"Medium-Xeric Pine",1,"#7D0C0C",11
+12,"Medium-Xeric Spruce",1,"#698222",12
+13,"Medium-Mesic Grassland",1,"#D5FF95",13
+14,"Medium-Mesic Aspen",1,"#B1FF38",14
+15,"Medium-Mesic Aspen Mix",1,"#9EFF0C",15
+50,"Medium-Mesic Aspen Boreal Mixedwood",1,"#26FE00",15.5
+16,"Medium-Mesic Pine",1,"#0B7401",16
+17,"Medium-Mesic Pine Mix",1,"#0B7401",17
+18,"Medium-Mesic White Spruce",1,"#085401",18
+19,"Medium-Hygric Grassland",0,"#99FF89",19
+20,"Medium-Hygric Poplar Mix",0,"#14C800",20
+21,"Medium-Hygric Spruce Mix",0,"#3CBC2F",21
+22,"Medium-Hygric Black Spruce Mix",0,"#39AE2C",22
+23,"Alpine",1,"#ef476f",23
+24,"Barren",1,"#DADAD0",24
+25,"Medium-Hydric Shrub (Poor Fen)",0,"#9EB373",25
+26,"Medium-Hydric Black Spruce Fen (Poor Fen)",0,"#75AC00",26
+27,"Rich-Mesic Grassland",1,"#AFFFA3",27
+28,"Rich-Hygric Shrubland",0,"#99FF89",28
+29,"Rich-Hygric Poplar",0,"#00C89E",29
+30,"Rich-Hygric Lodgepole Pine",0,"#00B991",30
+31,"Rich-Hygric Spruce",0,"#0E995F",31
+32,"Rich-Hydric Grass Fen",0,"#9FFFD7",32
+33,"Rich-Hydric Shrub Fen",0,"#2DFFA7",33
+34,"Rich-Hydric Black Spruce",0,"#0C5437",34
+35,"Shrub Swamp",0,"#ADFFE7",35
+36,"Treed Swamp",0,"#ADFFAF",36
+37,"Very Rich-Hydric Marsh",0,"#AEEDFF",37
+38,"Alkali-Hydric",0,"#8692FB",38
+39,"Lake",0,"#3649F9",39
+40,"River",0,"#071BD6",40
+41,"Agriculture",0,"#AB9F95",41
+42,"Urban",0,"#373737",42
+43,"Other Non-Fuel",0,"#ACAC96",43
