@@ -1,7 +1,3 @@
-#global.R
-#version: 0
-
-
 # Libraries ----
 library(shiny)
 library(shinyBS)
@@ -12,7 +8,6 @@ library(shinydashboard)
 #' @ver shinydashboardPlus 0.7.5
 library(shinydashboardPlus)
 
-
 library(leaflet)
 library(leafem)
 library(leaflet.extras)
@@ -20,7 +15,6 @@ library(leafsync)
 library(sf)
 library(dplyr, warn.conflicts = FALSE)
 library(plotly)
-library(terra)
 
 minZoom = 5
 maxZoom = 12
