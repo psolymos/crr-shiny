@@ -24,15 +24,9 @@ Scope of work:
 - [`data`](./data/): Example raster files and R scripts for data processing.
 - [`docs`](./docs/): Folder with static files to served through GitHub Pages.
 
-## Etc
-
-# TODO
-
-- find original tif layers for the ivanb.gistemp.com layers
-- load these layers as cog or as tms tiles
-- set up static map server for files
-- adjust code
-
 # License
 
-[MIT License](./LICENSE), Copyright (c) 2025 Ivan Bjelanovic, Peter Solymos
+Code: [MIT License](./LICENSE), Copyright (c) 2025 Ivan Bjelanovic, Peter Solymos
+
+Data sets in this repo are developed by and funding for the app development provided by
+[Canadian Forest Service / Natural Resources Canada / Government of Canada](https://natural-resources.canada.ca/).
