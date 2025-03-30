@@ -33,3 +33,5 @@ As data comes, continued support
 If app hours not enough, redeploy app under new shinyapps account or consider other self hosting options
 
 Transfer ownership of repo to better control access
+
+Add climate scenario other than rcp85

@@ -427,3 +427,10 @@ writeRaster(r1x, "data/STSim_Outputs/sc.it1.ts100_INT1U.tif", overwrite=TRUE, da
 
 # ??? rasterToPolygon
 p <- as.polygons(r2, aggregate = TRUE)
+
+# files
+
+p <- list.files("docs/v1", recursive = T)
+
+z <- data.frame(path = p, version="v1", dir = dirname(p), file=basename(p), pred_type="", time_period="", climate_model="")
+write.csv(z, row.names=F,file="app-v2/data/files_list.csv")

@@ -2,6 +2,12 @@
 
 ui<-function(request){
 
+convertMenuItem <- function(mi,tabName) {
+  mi$children[[1]]$attribs['data-toggle']="tab"
+  mi$children[[1]]$attribs['data-value'] = tabName
+  mi
+} 
+
 header <- dashboardHeaderPlus(
       title = "Climate-resilient reclamation",
       titleWidth = "20vw",
@@ -22,12 +28,13 @@ sidebar = dashboardSidebar(
           fluidRow(selectInput(
             inputId = "predType",
             label=p(icon("chart-line"),"Scenario"),
-            selected="ab_veg_fm_c", 
-            choices=c("Choose a scenario"="",
-                      "Fire-mediated, constrained" = "ab_veg_fm_c",
-                      "Fire-mediated, unconstrained" = "ab_veg_fm_uc",
-                      "Climate Driven" = "Stralberg"
-            ),
+            # selected="ab_veg_fm_c", 
+            choices=Files$get_pred_types(),
+            # choices=c("Choose a scenario"="", Files$get_pred_types()),
+            # choices=c("Choose a scenario"="",
+            #           "Fire-mediated, constrained" = "ab_veg_fm_c",
+            #           "Fire-mediated, unconstrained" = "ab_veg_fm_uc",
+            #           "Climate Driven" = "Stralberg"),
             multiple=F,
             width="100%"
           ),
@@ -46,13 +53,14 @@ sidebar = dashboardSidebar(
           selectInput(
             inputId = "climMod",
             label=p(icon("chart-line"),"GCM"),
-            selected="CanESM2", 
-            choices=c("Choose a GCM"="",
-                      # "combined"= "",
-                      "CanESM2"= "CanESM2",
-                      "CSIRO"= "CSIRO",
-                      "HadGEM2"= "HadGEM2"
-            ),
+            # selected="CanESM2", 
+            choices=Files$get_climate_models(),
+            # choices=c("Choose a GCM"="", Files$get_climate_models()),
+            # choices=c("Choose a GCM"="",
+            #           # "combined"= "",
+            #           "CanESM2"= "CanESM2",
+            #           "CSIRO"= "CSIRO",
+            #           "HadGEM2"= "HadGEM2"),
             multiple=F,
             width="100%"
             ),
@@ -61,14 +69,6 @@ sidebar = dashboardSidebar(
           ),'tab2')
        )
     )
-
-# used to be AB_VegChange_NSR_list:
-nsr_list <- c("Alpine", "Athabasca Plain", "Boreal Subarctic", "Central Mixedwood", 
-  "Central Parkland", "Dry Mixedgrass", "Dry Mixedwood", "Foothills Fescue", 
-  "Foothills Parkland", "Kazan Uplands", "Lower Boreal Highlands", 
-  "Lower Foothills", "Mixedgrass", "Montane", "Northern Fescue", 
-  "Northern Mixedwood", "Peace River Parkland", "Peace-Athabasca Delta", 
-  "Subalpine", "Upper Boreal Highlands", "Upper Foothills", "all NSRs")
 
 body = dashboardBody(
   tabItems(

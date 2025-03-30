@@ -33,25 +33,29 @@ Tab2Map1 = leaflet(
       )
     ) %>%
   leafem::addCOG(
-                url = paste0(fileserver_link, "base/Stralberg_baseline_vegeco4top_mod_prj_on.tif"),
+                # url = paste0(fileserver_link, "base/Stralberg_baseline_vegeco4top_mod_prj_on.tif"),
+                url = Files$get_path_for_baseline("Stralberg_baseline_vegeco4top_mod_prj_on"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "Stralberg_baseline_vegeco4top_mod_prj_on",
                 group = "Baseline ecosite (2018)") %>%
   leafem::addCOG(
-                url = paste0(fileserver_link, "base/DEP_baselayer_on.tif"),
+                # url = paste0(fileserver_link, "base/DEP_baselayer_on.tif"),
+                url = Files$get_path_for_baseline("DEP_baselayer_on"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "DEP_baselayer_on",
                 group = "DEP baseline") %>%
   leafem::addCOG(
-                url = paste0(fileserver_link, "base/BaselineUpland_prj_on.tif"),
+                # url = paste0(fileserver_link, "base/BaselineUpland_prj_on.tif"),
+                url = Files$get_path_for_baseline("BaselineUpland_prj_on"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "BaselineUpland_prj_on",
                 group = "Mask lowland (2018 study)") %>%
   leafem::addCOG(
-                url = paste0(fileserver_link, "base/PLC30_OS_100_prj_on.tif"),
+                # url = paste0(fileserver_link, "base/PLC30_OS_100_prj_on.tif"),
+                url = Files$get_path_for_baseline("PLC30_OS_100_prj_on"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "PLC30_OS_100_prj_on",
@@ -84,49 +88,54 @@ Tab2Map1 = leaflet(
       )
     ) %>%
   leafem::addCOG(
-                url = paste0(
-                  fileserver_link, 
-                  switch(input$predType,
-                    "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
-                    "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
-                    "Stralberg" = "scenarios/climate-driven/"),
-                  input$predType, "_20112040_",input$climMod,"_prj_on.tif"),
+                url = Files$get_path_for_scenario(input$predType, "20112040", input$climMod),
+                # url = paste0(
+                #   fileserver_link, 
+                #   switch(input$predType,
+                #     "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
+                #     "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
+                #     "Stralberg" = "scenarios/climate-driven/"),
+                #   input$predType, "_20112040_",input$climMod,"_prj_on.tif"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "20112040",
                 group = "2011-2040 Period") %>%
   leafem::addCOG(
-                url = paste0(
-                  fileserver_link, 
-                  switch(input$predType,
-                    "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
-                    "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
-                    "Stralberg" = "scenarios/climate-driven/"),
-                  input$predType, "_20412070_",input$climMod,"_prj_on.tif"),
+                url = Files$get_path_for_scenario(input$predType, "20412070", input$climMod),
+                # url = paste0(
+                #   fileserver_link, 
+                #   switch(input$predType,
+                #     "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
+                #     "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
+                #     "Stralberg" = "scenarios/climate-driven/"),
+                #   input$predType, "_20412070_",input$climMod,"_prj_on.tif"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "20412070",
                 group = "2041-2070 Period") %>%
   leafem::addCOG(
-                url = paste0(
-                  fileserver_link, 
-                  switch(input$predType,
-                    "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
-                    "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
-                    "Stralberg" = "scenarios/climate-driven/"),
-                  input$predType, "_20712100_",input$climMod,"_prj_on.tif"),
+                url = Files$get_path_for_scenario(input$predType, "20712100", input$climMod),
+                # url = paste0(
+                #   fileserver_link, 
+                #   switch(input$predType,
+                #     "ab_veg_fm_c" = "scenarios/fire-mediated-constrained/",
+                #     "ab_veg_fm_uc" = "scenarios/fire-mediated-unconstrained/",
+                #     "Stralberg" = "scenarios/climate-driven/"),
+                #   input$predType, "_20712100_",input$climMod,"_prj_on.tif"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "20712100",
                 group = "2071-2100 Period") %>%
   leafem::addCOG(
-                url = paste0(fileserver_link, "base/BaselineUpland_prj_on.tif"),
+                # url = paste0(fileserver_link, "base/BaselineUpland_prj_on.tif"),
+                url = Files$get_path_for_baseline("BaselineUpland_prj_on"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "BaselineUpland_prj_on",
                 group = "Mask lowland (2018 study)") %>%
   leafem::addCOG(
-                url = paste0(fileserver_link, "base/PLC30_OS_100_prj_on.tif"),
+                # url = paste0(fileserver_link, "base/PLC30_OS_100_prj_on.tif"),
+                url = Files$get_path_for_baseline("PLC30_OS_100_prj_on"),
                 rgb = TRUE,
                 attribution="CFS NRCAN",
                 layerId = "PLC30_OS_100_prj_on",
