@@ -104,7 +104,6 @@ body = dashboardBody(
 )
 
 dashboardPagePlus(
-      tags$link(rel = "stylesheet", type = "text/css", href = "./customlegend.css"),
       header = header,
       sidebar= sidebar,
       body = body,
