@@ -376,13 +376,16 @@ output$Plot1 <- renderPlotly({
       distinct(Txtrcls, .keep_all = T)%>% 
       add_trace(y=~Txtrcls_num, x=~texture_Areaha_all ,
                 type="bar", orientation = 'h',  marker=list(color=Soil_texture_classes$color),
-                text = ~paste0("NSR: all<br>", "Soil texture: ", Txtrcls, "<br>", round(texture_Areaha_all, 0), " ha<br>", texture_Areaha_perc_all, "%"), 
-                hoverinfo = 'text', showlegend=F) %>%
+                text = ~paste0("NSR: all<br>", "Soil texture: ", Txtrcls, "<br>", round(texture_Areaha_all, 0), " ha<br>", texture_Areaha_perc_all, "%"),
+                hoverinfo = 'text',
+                # hovertemplate = "NSR: all<br>Soil texture: %{Txtrcls}<br>%{texture_Areaha_all:$.0f} ha<br>%{texture_Areaha_perc_all}%",
+                showlegend=F) %>%
       layout(yaxis = list(title = "", showticklabels = F, autorange="reversed"),
              xaxis = list(title = "Area by texture class <br>within selected boundary (ha)"),
              legend = list(orientation = 'h'),
              margin = list(l=0),
-             barmode = 'stack')
+             barmode = 'stack',
+             hovermode = 'y unified')
     
   } else  { 
 
@@ -396,7 +399,8 @@ output$Plot1 <- renderPlotly({
              xaxis = list(title = "Area by texture class <br>within selected boundary (ha)"),
              legend = list(orientation = 'h'),
              margin = list(l=0),
-             barmode = 'stack')
+             barmode = 'stack',
+             hovermode = 'y unified')
     
     # subset(plot1_dataset, NSRNAME==input$NSRSel) %>% 
     #   plot_ly() %>% 
@@ -444,7 +448,8 @@ output$Plot2 <- renderPlotly({
       layout(yaxis = list(title = "", showticklabels = F, autorange="reversed"),
              xaxis = list(title = "Area within selected boundary (ha)"),
              legend = list(orientation = 'h'),
-             margin = list(l=0))
+             margin = list(l=0),
+             hovermode = 'y unified')
     
   } else  { 
     
@@ -458,7 +463,8 @@ output$Plot2 <- renderPlotly({
              xaxis = list(title = "Area within selected boundary (ha)"),
              legend = list(orientation = 'h'),
              margin = list(l=0),
-             barmode = 'stack')
+             barmode = 'stack',
+             hovermode = 'y unified')
     
   }
 })
@@ -494,7 +500,8 @@ output$Plot3 <- renderPlotly({
                 type="bar", orientation = 'h') %>%
       layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
              xaxis = list(title = "Area within selected boundary (ha)"),
-             margin = list(l=0))
+             margin = list(l=0),
+             hovermode = 'y unified')
     
   } else  { 
     
@@ -505,7 +512,8 @@ output$Plot3 <- renderPlotly({
                 type="bar", orientation = 'h') %>%
       layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
              xaxis = list(title = "Area within selected boundary (ha)"),
-             margin = list(l=0))
+             margin = list(l=0),
+             hovermode = 'y unified')
     
   }
 })
@@ -946,7 +954,8 @@ Tab2Plot0 =  AB_VegChange_NSR_summ %>%
                 type="bar", orientation = 'h') %>%
       layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
              xaxis = list(title = "Area (ha)"),
-             margin = list(l=0))
+             margin = list(l=0),
+             hovermode = 'y unified')
 
 Tab2Plot1 =  AB_VegChange_NSR_summ %>% 
   group_by(ClassordNum, Classification, Color) %>% 
@@ -959,7 +968,8 @@ Tab2Plot1 =  AB_VegChange_NSR_summ %>%
             type="bar", orientation = 'h') %>%
   layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
          xaxis = list(title = "Area (ha)"),
-         margin = list(l=0))
+         margin = list(l=0),
+         hovermode = 'y unified')
 
 
 subplot(list(Tab2Plot0, Tab2Plot1), shareX = T, titleX = T, nrows=2, heights= c(0.5, 0.5)) %>% 
@@ -977,7 +987,8 @@ Tab2Plot3 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>%
                 type="bar", orientation = 'h') %>%
       layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
              xaxis = list(title = "Area (ha)"),
-             margin = list(l=0))
+             margin = list(l=0),
+             hovermode = 'y unified')
     
 Tab2Plot4 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>% 
   plot_ly() %>% 
@@ -986,7 +997,8 @@ Tab2Plot4 <- subset(AB_VegChange_NSR_summ, NSRNAME==input$Tab2NSRSel) %>%
             type="bar", orientation = 'h') %>%
   layout(yaxis = list(title = "", showticklabels = F, tickfont =list(size=6), tickangle = 0, autorange="reversed"),
          xaxis = list(title = "Area (ha)"),
-         margin = list(l=0))
+         margin = list(l=0),
+         hovermode = 'y unified')
 
 subplot(list(Tab2Plot3, Tab2Plot4), shareX = T, titleX = T, nrows=2, heights= c(0.5, 0.5)) %>% 
       layout(annotations = list(
