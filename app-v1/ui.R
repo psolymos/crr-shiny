@@ -82,17 +82,17 @@ sidebar = dashboardSidebar(
             ),
           fluidRow(style = "float: right; margin-right: 30px; ",
                    plotOutput(outputId = "Tab2legend", height = "42vh", width = "15vw")))
-          ),'tab2'),
-        convertMenuItem(menuItem(
-          text = "3. Item",
-          # icon = icon("globe-americas",lib = "font-awesome"),
-          tabName = "tab3",
-          selected = F,
-          startExpanded = F,
-          br(),
-          h5("some text"),
-          br()
-        ),'tab3')
+          ),'tab2')#,
+        # convertMenuItem(menuItem(
+        #   text = "3. Item",
+        #   # icon = icon("globe-americas",lib = "font-awesome"),
+        #   tabName = "tab3",
+        #   selected = F,
+        #   startExpanded = F,
+        #   br(),
+        #   h5("some text"),
+        #   br()
+        # ),'tab3')
        )
     )
     
