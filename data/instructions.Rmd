@@ -1,0 +1,8 @@
+---
+title: Maintaining the Climate-resilient Reclamation Shiny App
+author: Peter Solymos / Analythium Solutions
+date: 2025-03-30
+output: pdf_document
+---
+
+Add instructions here.
