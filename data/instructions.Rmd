@@ -5,4 +5,31 @@ date: 2025-03-30
 output: pdf_document
 ---
 
-Add instructions here.
+## Introduction
+
+## Project organization
+
+## App deployment
+
+### Legacy app (v1)
+
+### Updated Shiny app (v2)
+
+## App development
+
+
+### Collaborative code management
+
+Explain github and collaboration (grant permission or fork & PR)
+
+### Adding new layers
+
+
+
+## Next steps
+
+As data comes, continued support
+
+If app hours not enough, redeploy app under new shinyapps account or consider other self hosting options
+
+Transfer ownership of repo to better control access

@@ -151,9 +151,9 @@ body = dashboardBody(
                                    no_outline=T)
                   )
                )
-      ),
-    tabItem(
-      tabName = "tab3", h1("Project/App info"))
+      )#,
+    # tabItem(
+    #   tabName = "tab3", h1("Project/App info"))
   )
 )
   

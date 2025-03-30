@@ -1,0 +1,76 @@
+
+.mySpecialLegend {
+    padding: 10px 20px;
+    font: 26px/26px "Times New Roman", Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 27px;
+    color: #555;
+ }
+
+
+    
+.mySpecialLegend1 i {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1.5;
+}
+
+
+ .mySpecialLegendFuel {
+    padding: 6px 8px;
+    font: 10px/10px Arial, Helvetica, sans-serif;
+    background: red;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 16px;
+    color: #555;
+ }
+
+
+.mySpecialLegendDEP {
+    padding: 6px 8px;
+    font: 10px/10px Arial, Helvetica, sans-serif;
+    background: red;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 8px;
+    color: #555;
+ }
+
+.mySpecialLegendDEP i {
+    width: 8px;
+    height: 8px;
+    margin-right: 4px;
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1.5;
+}
+
+
+.btn-group, .btn-group-vertical {
+  column-count: 1;
+ }
+  
+.btn-group-toggle {
+  width:15vw;
+ }
+
+.radiobtn { 
+  width:15vw;
+  margin-top: 0.5vh;
+ }
+  
+  
