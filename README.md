@@ -11,7 +11,7 @@ Scope of work:
   - Updated Shiny app (v2): <https://analythium.shinyapps.io/crr-shiny-v2/>
 
 2. Add results from new Alberta simulations to be provided by ApexRMS (up to 64 scenarios)
-  - New results are organized inside the [`docs/v2`](./docs/v1/) folder for GitHub Pages
+  - New results are organized inside the [`docs/v2`](./docs/v2/) folder for GitHub Pages
   - The v2 of the Shiny app ([`app-v2`](./app-v2/)) uses an easy-to-maintain logic
 
 3. Provide commented R code and instructions for updating the app with new layers

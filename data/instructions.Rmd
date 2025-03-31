@@ -1,37 +1,426 @@
 ---
-title: Maintaining the Climate-resilient Reclamation Shiny App
+title: Climate-resilient Reclamation (CRR) Shiny App
 author: Peter Solymos / Analythium Solutions
-date: 2025-03-30
+date: 2025-03-31
 output: pdf_document
+fontfamily: mathpazo
+fontsize: 11pt
+urlcolor: blue
 ---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(warning=FALSE,message=FALSE)
+library(terra)
+```
 
 ## Introduction
 
+The Climate-resilient Reclamation (CRR) Shiny App was originally developed by
+Ivan Bjelanovic to help visualize baseline and future ecosystem states
+in Alberta developed by the Canadian Forest Service (Natural Resources Canada).
+
+This original version of the app was deployed to the Shinyapps.io platform and
+referenced raster layers hosted on a 3rd party geospatial server.
+This server became defunct and as a result the Shiny app stopped working.
+
+The current project's goal is to revitalize the app and find sustainable and
+easy-to-manage hosting option for the app and raster layers:
+
+1. Update existing app built by Ivan Bjelanovic to current standards and packages 
+   (including re-establishing broken links);
+2. Add results from new Alberta simulations to be provided by ApexRMS 
+   (up to 64 scenarios);
+3. Provide commented R code and instructions for updating the app with new layers.
+
+This report outlines how the 3 delivery points were accomplished.
+
 ## Project organization
+
+The CRR Shiny App project is hosted on GitHb as a public repository:
+<https://github.com/psolymos/crr-shiny>. 
+To get the source code, visit the link and click green "Code" button to download
+a zip file with the code in it. ALternatively, you can use `git` to clone
+the repository with `git clone https://github.com/psolymos/crr-shiny.git`.
+
+The repository has the following folder:
+
+- `app-v1`: Original (v1) Shiny app with updated references to static files.
+- `app-v2`: V2 of the Shiny app with flexibility for adding new layers.
+- `data`: Example raster files and R scripts for data processing.
+- `docs`: Folder with static files to be served through GitHub Pages.
 
 ## App deployment
 
+The app needs 2 different deployments:
+
+1. The Shiny app that is responsible for the user interface and the
+   application logic;
+2. and the file server that hosts the spatial files that are too big
+   and numerous for being deployed alongside the Shiny app.
+
+Shiny apps can be hosted in many ways. The easiest and free option is to
+register for a Shinyapps.io account at <https://www.shinyapps.io/auth/oauth/signup>.
+The free account's credentials can be added to RStudio Desktop.
+Then, the app can be deployed from RStudio within a user account.
+
 ### Legacy app (v1)
+
+The original version of the Shiny app was updated the following ways:
+
+- R package dependencies revised and updated to reflect changes around the
+  geospatial package ecosystem (retiring `sp`, `geos`, etc. in favor of `sf`,
+  `terra` and others);
+- Updated links to external file server (see below the _File server_ section).
+
+The source code of the updated version of the original app is in the `app-v1`
+folder of the GitHub repository.
+The current live deployment of this v1 of the app can be found at:
+<https://analythium.shinyapps.io/crr-shiny-v1/>.
+
+Install dependencies (from inside the `app-v1` folder) using the 
+`dependencies.json` file:
+
+```R
+if (!requireNamespace("deps")) install.packages("deps")
+deps::install()
+```
+
+To edit the v1 of the app, double click the Rproj file in the `app-v1`
+folder -- this will open the project in RStudio Desktop.
+
+To run the app, click on the "play" button in RStudio,
+call `shiny::runApp("app-v1")` from R or
+`R -q -e 'shiny::runApp("app-v1")'` from shell.
 
 ### Updated Shiny app (v2)
 
-## App development
+The v1 of the Shiny app has the following updates compared to the v1:
 
+- It is a stripped down version focusing on scenario comparisons;
+- It is set up for easier maintenance explained later in this document;
+- It has fewer dependencies.
+
+The source code of the updated version of the original app is in the `app-v2`
+folder of the GitHub repository.
+The current live deployment of this v2 of the app can be found at:
+<https://analythium.shinyapps.io/crr-shiny-v2/>.
+
+Install dependencies (from inside the `app-v2` folder) with:
+
+```R
+if (!requireNamespace("deps")) install.packages("deps")
+deps::install()
+```
+
+This command will use the `dependencies.json` file to install missing R packages.
+
+To edit the v1 of the app, double click the Rproj file in the `app-v2`
+folder -- this will open the project in RStudio Desktop.
+
+To run the app, click on the "play" button in RStudio,
+call `shiny::runApp("app-v2")` from R or
+`R -q -e 'shiny::runApp("app-v2")'` from shell.
+
+### File server
+
+The links in the Shiny apps point to the GitHub Pages based file server that is 
+part of the `docs` folder. GitHub pages are available for free of charge for
+public GitHub repositories. It needs to be enabled in the Settings/Pages.
+The repository serves static files from the `docs` folder of the main Git branch.
+When new files are added to the repository, the files will be published
+on the `github.io` website.
+
+E.g. for this setup, the file `<github-repository-url>/docs/index.html` will 
+be published at `https://<github-pages-url/index.html`.
+The file `https://github.com/psolymos/crr-shiny/docs/v1/scenarios/...tif`
+will be available at `https://psolymos.github.io/crr-shiny/docs/v1/scenarios/...tif`.
+
+GitHub pages can be accessed from other websites because it allows
+cross origin resource sharing (via CORS headers). This makes this service
+ideal for hosting static assets. In our case, GeoTIFF files.
 
 ### Collaborative code management
 
-Explain github and collaboration (grant permission or fork & PR)
+The repository is hosted under the `psolymos` personal GitHub account.
+The repository is public, which means that others can fork the project.
+Edits to forked projects can be merged to the upstream repository
+after submitting a pull request. But the changes do not have to be merged
+for others to develop the project and create independent Shinyapps.io
+deployments. However, submitting pull requests is good practice.
 
-### Adding new layers
+The owner of the repository (`psolymos`) can grant write access to other
+GitHub users. If that is desired, please let me know.
 
+The ownership of the repository can also be transferred to another user or
+GitHub organization.
 
+## Adding new layers
 
-## Next steps
+The v2 of the Shiny app is developed with ease of maintenance in mind.
+Here we outline how to process new raster layers and add them to the app
+and the file server.
 
-As data comes, continued support
+### Raster layer processing
 
-If app hours not enough, redeploy app under new shinyapps account or consider other self hosting options
+A new layer is expected to be a GeoTIFF file with a single band, that band
+should have positive integers as values, or missing. The cartographic 
+reference system needs to be know, otherwise assumed to be 
+Alberta 10-TM (Forest) (EPSG:3400). The raster cell resolution is
+500 m by 500 m.
 
-Transfer ownership of repo to better control access
+The cell values denote ecotype classes, such as:
 
-Add climate scenario other than rcp85
+```{r echo=FALSE}
+es <- read.csv("ecosite_classes.csv")
+knitr::kable(es)
+```
+
+An example input file is `Stralberg_baseline_vegeco4top_mod_int.tif`:
+
+```{r}
+library(terra)
+r1 <- rast("Stralberg/Stralberg_baseline_vegeco4top_mod_int.tif")
+r1
+```
+
+We can set the color table for the ecosite classes as:
+
+```{r}
+es <- read.csv("ecosite_classes.csv")
+ct <- data.frame(value=es$Code, col=es$Color)
+str(ct)
+
+coltab(r1) <- ct
+```
+
+We can now plot the raster and get the assigned color mapping:
+
+```{r}
+plot(r1)
+```
+
+#### Saving integer raster
+
+To save the integer version in a compressed format and without loss of information,
+use the following command:
+
+```R
+writeRaster(r1, "file_int.tif", overwrite=TRUE, datatype="INT1U")
+```
+
+This will use the default LZW compression (lossless) and unsigned 8-bit integer.
+This can store values between 0 and 254 (2^8-1, minus one for `NA` storage), 
+raster values are rounded if not already integer.
+This will result in the smallest file size (<1Mb for a 500 m resolution raster
+for Alberta).
+
+The integer version can be further processed and and summarized.
+
+#### Save RGB
+
+The colorized (RGB: red-green-blue) version is useful to show the cells
+as the desired color without having to use a color table. This is important
+because Leaflet maps can't easily display categorical raster layers
+without extensive JavaScript coding.
+
+The colorized version is also reprojected to web mercator that is the 
+standard for web mapping:
+
+- EPSG:4326 is used for feature geometries (i.e. roads, etc.),
+- EPSG:3857 is used for base layers and similar (raster, image) objects.
+
+We will use an existing TIF file as the template that has the
+desired EPSG3857 projection and matching resolution to our integer map:
+
+```{r}
+rt <- rast("Stralberg/Stralberg_baseline_vegeco4top_mod_prj_on.tif")
+rt
+```
+
+We need to use the nearest neighbor method:
+
+```{r}
+r1w <- project(r1, rt, method = "near")
+```
+
+Now we can colorize the layer as:
+
+```{r}
+r1c <- colorize(r1w, "rgb", alpha=FALSE)
+```
+
+```{r}
+plot(r1c)
+```
+
+Use unsigned 16-bit integer raster format for the RGB image to avoid
+potential issues with the missing data mask (alpha channel).
+Use the `DEFLATE` compression method for best results:
+
+```R
+writeRaster(r1c, "file_rgb.tif", overwrite=TRUE, datatype="INT2U", gdal="COMPRESS=DEFLATE")
+```
+
+The output file is usually 1.5-2 times larger than integer version.
+
+#### ApexRMS provided rasters
+
+The raster values provided by ApexRMS (`EcositeStateID` column) for the new 
+scenarios need to be mapped to the ecosite classes using a lookup table:
+
+```{r echo=FALSE}
+lt <- read.csv("ecosite_classes_lookup.csv")
+knitr::kable(lt)
+```
+
+Here is an example raster file:
+
+```{r}
+r2 <- rast("STSim_Outputs/sc.it1.ts100.tif")
+r2
+summary(r2)
+```
+
+We can apply the ecosite classification as follows:
+
+```{r}
+vo <- values(r2) # old values
+summary(vo)
+
+vn <- vo         # new values
+lt <- read.csv("ecosite_classes_lookup.csv")
+vn[,1] <- ifelse(is.na(vo[,1]), NA, lt$Code[match(vo[,1], lt$EcositeStateID)])
+summary(vn)
+
+r3 <- r2         # create a copy
+values(r3) <- vn # set values
+```
+
+We can now apply the previous color table to this new raster:
+
+```{r}
+coltab(r3) <- ct
+plot(r3)
+```
+
+Saving the integer version, projecting to web mercator and colorization,
+finally saving the RGB version is the same as shown before.
+
+### Adding the layer to the file server
+
+The layer can now be added to the `docs` folder so it is served via GitHub
+pages. The `docs` folder has the following high level structure:
+
+- `testing`: folder for testing related files,
+- `v1`: files served for the v1 of the Shiny app,
+- `v2`: this will be used for organizing future layers for the v2 of the Shiny app.
+
+The `v1` folder currently contains the following files:
+
+```bash
+docs/v1
+|-- base
+|   |-- BaselineUpland_prj_on.tif
+|   |-- DEP_baselayer_on.tif
+|   |-- PLC30_OS_100_prj_on.tif
+|   +-- Stralberg_baseline_vegeco4top_mod_prj_on.tif
++-- scenarios
+    |-- climate-driven
+    |   |-- Stralberg_20112040_CSIRO_prj_on.tif
+    |   |-- Stralberg_20112040_CanESM2_prj_on.tif
+    |   |-- Stralberg_20112040_HadGEM2_prj_on.tif
+    |   |-- Stralberg_20412070_CSIRO_prj_on.tif
+    |   |-- Stralberg_20412070_CanESM2_prj_on.tif
+    |   |-- Stralberg_20412070_HadGEM2_prj_on.tif
+    |   |-- Stralberg_20712100_CSIRO_prj_on.tif
+    |   |-- Stralberg_20712100_CanESM2_prj_on.tif
+    |   +-- Stralberg_20712100_HadGEM2_prj_on.tif
+    |-- fire-mediated-constrained
+    |   |-- ab_veg_fm_c_20112040_CSIRO_prj_on.tif
+    |   |-- ab_veg_fm_c_20112040_CanESM2_prj_on.tif
+    |   |-- ab_veg_fm_c_20112040_HadGEM2_prj_on.tif
+    |   |-- ab_veg_fm_c_20412070_CSIRO_prj_on.tif
+    |   |-- ab_veg_fm_c_20412070_CanESM2_prj_on.tif
+    |   |-- ab_veg_fm_c_20412070_HadGEM2_prj_on.tif
+    |   |-- ab_veg_fm_c_20712100_CSIRO_prj_on.tif
+    |   |-- ab_veg_fm_c_20712100_CanESM2_prj_on.tif
+    |   |-- ab_veg_fm_c_20712100_HadGEM2_prj_on.tif
+    +-- fire-mediated-unconstrained
+        |-- ab_veg_fm_uc_20112040_CSIRO_prj_on.tif
+        |-- ab_veg_fm_uc_20112040_CanESM2_prj_on.tif
+        |-- ab_veg_fm_uc_20112040_HadGEM2_prj_on.tif
+        |-- ab_veg_fm_uc_20412070_CSIRO_prj_on.tif
+        |-- ab_veg_fm_uc_20412070_CanESM2_prj_on.tif
+        |-- ab_veg_fm_uc_20412070_HadGEM2_prj_on.tif
+        |-- ab_veg_fm_uc_20712100_CSIRO_prj_on.tif
+        |-- ab_veg_fm_uc_20712100_CanESM2_prj_on.tif
+        +-- ab_veg_fm_uc_20712100_HadGEM2_prj_on.tif
+```
+
+The `base` subfolder is for baseline rasters, while the `scenarios` subfolder
+has the different runs inside.
+
+New GeoTIFF files (EPSG:3857 and RGB format) should be organized
+within the `v2` folder similarly to how it was done for `v1`.
+The integer version and other supporting files can also be added as needed.
+
+### Adding the new layer to the Shiny app
+
+The Shiny app pulls the information about the file server from a csv file.
+It is in `app-v2/data/files_list.csv`:
+
+```{r}
+files_list <- read.csv("../app-v2/data/files_list.csv")
+files_list$time_period <- as.character(files_list$time_period)
+head(files_list)
+```
+
+This file captures the important aspects of the baseline and scenario related
+raster files. The v2 app has functions that can retrieve the following info:
+
+```R
+Files$get_pred_types()
+#   Climate driven   Fire mediated, constrained Fire mediated, unconstrained 
+#      "Stralberg"                "ab_veg_fm_c"               "ab_veg_fm_uc" 
+
+Files$get_time_periods()
+#  2011-2040  2041-2070  2071-2100 
+# "20112040" "20412070" "20712100" 
+
+Files$get_climate_models()
+#   CanESM2     CSIRO   HadGEM2 
+# "CanESM2"   "CSIRO" "HadGEM2" 
+```
+
+These are used to construct the right-hand-side menu in the app.
+
+Inside the Shiny server function, the following expressions return the
+path required for the GeoTIFF URLs:
+
+```R
+Files$get_path_for_baseline("BaselineUpland_prj_on")
+# [1] "v1/base/BaselineUpland_prj_on.tif"
+
+Files$get_path_for_scenario("Stralberg", "20112040", "CanESM2")
+# [1] "v1/scenarios/climate-driven/Stralberg_20112040_CanESM2_prj_on.tif"
+```
+
+If the files list CSV file reflects the file server status, the v2 Shiny app
+will be able to display any new layers.
+
+### Note about Leaflet limitations
+
+Leaflet is a web mapping library that is used inside the Shiny app.
+It uses resampling for displaying rasters at lower (coarser) zoom levels.
+This behavior cannot be turned off. The benefit of the trade-off is that
+the GeoTIFF layers can be displayed entirely on the client side. I.e. the 
+Shiny app does not have to send into to the browser. Also, the browser can
+cache the layers, so loading the 2nd time should take less time.
+
+An alternative option is to load the integer version of the TIF from the
+file server and display the color mapped or colorized version from within
+the Shiny R session. This is an extremely resource intensive step and requires
+patience from the user. Alberta-sized rasters can be handled this way,
+and the Shiny session has to send the whole raster image to the client-side
+HTML, so on top of the server side compute requirements, it is also heavy
+on the client side.

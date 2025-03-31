@@ -9,8 +9,7 @@ if (!requireNamespace("deps")) install.packages("deps")
 deps::install()
 ```
 
-This command will use the [`app/dependencies.json`](./app/dependencies.json)
-to install dependencies.
+This command will use the `dependencies.json` file to install dependencies.
 
 To run the app, call `shiny::runApp("app-v1")` from R or
 `R -q -e 'shiny::runApp("app-v1")'` from shell.
